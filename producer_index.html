@@ -42,7 +42,12 @@
                 </div>
                 <div class="degree">
                     <input type="range" class="degree-input_room1" name="degree-input_room1" id="degree-input_room1" min="0" max="100" value="50">
-                    <output class="degree-value_room1">23 C°</output>
+                    <output class="degree-value_room1">
+                      <script>
+                        var ac1 = localStorage.getItem("degree-input-room1");
+                        ac1!=null?document.write(`${ac1}`): document.write(`23`)
+                      </script>  
+                      C°</output>
                 </div>
             </div>
 

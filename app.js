@@ -159,16 +159,185 @@ if(document.getElementById('electric_switch_room4')){
   ? electricSwitch4.checked = saveElectricSwitch4 ==='true'
   :saveElectricSwitch4 =false 
 }
-//lights
-if(document.getElementById('room1-light-1')){
-const light1 = document.getElementById('room1-light-1');
+//lights room1
+if (document.getElementById('room1-light-1')) {
+  const rangeInput1 = document.getElementById('room1-light-1');
 
-light1.addEventListener('input', function () {
-    localStorage.setItem('light1', this.value);
-});
+  rangeInput1.addEventListener('input', function () {
+      localStorage.setItem('room1-range1', this.value);
+  });
 
-const saveL1 = localStorage.getItem('light1');
-saveL1 !== null 
-?light1.value = saveL1
-:saveL1 = 50;
+  const savedRange1 = localStorage.getItem('room1-range1');
+  if (savedRange1 !== null) {
+      rangeInput1.value = savedRange1;
+  }
+}
+
+if (document.getElementById('room1-light-2')) {
+  const rangeInput2 = document.getElementById('room1-light-2');
+
+  rangeInput2.addEventListener('input', function () {
+      localStorage.setItem('room1-range2', this.value);
+  });
+
+  const savedRange2 = localStorage.getItem('room1-range2');
+  if (savedRange2 !== null) {
+      rangeInput2.value = savedRange2;
+  }
+}
+
+if (document.getElementById('room1-light-3')) {
+  const rangeInput3 = document.getElementById('room1-light-3');
+
+  rangeInput3.addEventListener('input', function () {
+      localStorage.setItem('room1-range3', this.value);
+  });
+
+  const savedRange3 = localStorage.getItem('room1-range3');
+  if (savedRange3 !== null) {
+      rangeInput3.value = savedRange3;
+  }
+}
+//lights room2
+if (document.getElementById('room2-light-1')) {
+  const rangeInput1 = document.getElementById('room2-light-1');
+
+  rangeInput1.addEventListener('input', function () {
+      localStorage.setItem('room2-range1', this.value);
+  });
+
+  const savedRange1 = localStorage.getItem('room2-range1');
+  if (savedRange1 !== null) {
+      rangeInput1.value = savedRange1;
+  }
+}
+
+if (document.getElementById('room2-light-2')) {
+  const rangeInput2 = document.getElementById('room2-light-2');
+
+  rangeInput2.addEventListener('input', function () {
+      localStorage.setItem('room2-range2', this.value);
+  });
+
+  const savedRange2 = localStorage.getItem('room2-range2');
+  if (savedRange2 !== null) {
+      rangeInput2.value = savedRange2;
+  }
+}
+
+if (document.getElementById('room2-light-3')) {
+  const rangeInput3 = document.getElementById('room2-light-3');
+
+  rangeInput3.addEventListener('input', function () {
+      localStorage.setItem('room2-range3', this.value);
+  });
+
+  const savedRange3 = localStorage.getItem('room2-range3');
+  if (savedRange3 !== null) {
+      rangeInput3.value = savedRange3;
+  }
+}
+//lights room3
+if (document.getElementById('room3-light-1')) {
+  const rangeInput1 = document.getElementById('room3-light-1');
+
+  rangeInput1.addEventListener('input', function () {
+      localStorage.setItem('room3-range1', this.value);
+  });
+
+  const savedRange1 = localStorage.getItem('room3-range1');
+  if (savedRange1 !== null) {
+      rangeInput1.value = savedRange1;
+  }
+}
+
+if (document.getElementById('room3-light-2')) {
+  const rangeInput2 = document.getElementById('room3-light-2');
+
+  rangeInput2.addEventListener('input', function () {
+      localStorage.setItem('room3-range2', this.value);
+  });
+
+  const savedRange2 = localStorage.getItem('room3-range2');
+  if (savedRange2 !== null) {
+      rangeInput2.value = savedRange2;
+  }
+}
+
+if (document.getElementById('room3-light-3')) {
+  const rangeInput3 = document.getElementById('room3-light-3');
+
+  rangeInput3.addEventListener('input', function () {
+      localStorage.setItem('room3-range3', this.value);
+  });
+
+  const savedRange3 = localStorage.getItem('room3-range3');
+  if (savedRange3 !== null) {
+      rangeInput3.value = savedRange3;
+  }
+}
+//lights-room4
+if (document.getElementById('room4-light-1')) {
+  const rangeInput1 = document.getElementById('room4-light-1');
+
+  rangeInput1.addEventListener('input', function () {
+      localStorage.setItem('room4-range1', this.value);
+  });
+
+  const savedRange1 = localStorage.getItem('room4-range1');
+  if (savedRange1 !== null) {
+      rangeInput1.value = savedRange1;
+  }
+}
+
+if (document.getElementById('room4-light-2')) {
+  const rangeInput2 = document.getElementById('room4-light-2');
+
+  rangeInput2.addEventListener('input', function () {
+      localStorage.setItem('room4-range2', this.value);
+  });
+
+  const savedRange2 = localStorage.getItem('room4-range2');
+  if (savedRange2 !== null) {
+      rangeInput2.value = savedRange2;
+  }
+}
+
+if (document.getElementById('room4-light-3')) {
+  const rangeInput3 = document.getElementById('room4-light-3');
+
+  rangeInput3.addEventListener('input', function () {
+      localStorage.setItem('room4-range3', this.value);
+  });
+
+  const savedRange3 = localStorage.getItem('room4-range3');
+  if (savedRange3 !== null) {
+      rangeInput3.value = savedRange3;
+  }
+}
+//ac range 1
+if (document.getElementById('degree-input-room1')) {
+  const degreeInputRoom1 = document.getElementById('degree-input-room1');
+
+  degreeInputRoom1.addEventListener('input', function () {
+      localStorage.setItem('degree-input-room1', this.value);
+  });
+
+  const savedDegreeRoom1 = localStorage.getItem('degree-input-room1');
+  if (savedDegreeRoom1 !== null) {
+      degreeInputRoom1.value = savedDegreeRoom1;
+  }
+}
+//ac range 2
+if (document.getElementById('degree-input-room2')) {
+  const degreeInputRoom2 = document.getElementById('degree-input-room2');
+
+  degreeInputRoom2.addEventListener('input', function () {
+      localStorage.setItem('degree-input-room2', this.value);
+  });
+
+  const savedDegreeRoom2 = localStorage.getItem('degree-input-room2');
+  if (savedDegreeRoom2 !== null) {
+      degreeInputRoom2.value = savedDegreeRoom2;
+  }
 }

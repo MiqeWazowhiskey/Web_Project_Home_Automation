@@ -105,16 +105,23 @@
           <div class="light-elements">
             <div class="light-element-c">
               <label for="light-1">Light 1</label>
-              <p>52</p>
+              <script>
+                  var light1 = localStorage.getItem("room3-range1");
+                  light1!=null?document.write(`<p>${light1}</p>`): document.write(`<p>50</p>`)
+              </script>
             </div>
             <div class="light-element-c">
               <label for="light-2">Light 2</label>
-              <p>32</p>
-            </div>
+              <script>
+                  var light2 = localStorage.getItem("room3-range2");
+                  light2!=null?document.write(`<p>${light2}</p>`): document.write(`<p>50</p>`)
+              </script>               </div>
             <div class="light-element-c">
               <label for="light-3">Light 3</label>
-              <p>52</p>
-            </div>
+              <script>
+                  var light3 = localStorage.getItem("room3-range3");
+                  light3!=null?document.write(`<p>${light3}</p>`): document.write(`<p>50</p>`)
+              </script>              </div>
           </div>        
         </div>
     

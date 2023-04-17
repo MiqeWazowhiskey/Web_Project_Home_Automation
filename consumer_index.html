@@ -46,8 +46,12 @@
                     </h1>
                 </div>
                 <div class="degree">
-                    <input type="range" class="degree-input_room1" name="degree-input_room1" id="degree-input_room1" min="0" max="100" value="50">
-                    <output class="degree-value_room1">23 C°</output>
+                    <output class="degree-value_room1">
+                        <script>
+                            var ac1 = localStorage.getItem("degree-input-room1");
+                            ac1!=null?document.write(`${ac1}`): document.write(`23`)
+                          </script>  
+                           C°</output>
                 </div>
             </div>
 
@@ -122,16 +126,23 @@
             <div class="light-elements">
               <div class="light-element-c">
                 <label for="light-1">Light 1</label>
-                <p>52</p>
+                <script>
+                    var light1 = localStorage.getItem("room1-range1");
+                    light1!=null?document.write(`<p>${light1}</p>`): document.write(`<p>50</p>`)
+                </script>
               </div>
               <div class="light-element-c">
                 <label for="light-2">Light 2</label>
-                <p>32</p>
-              </div>
+                <script>
+                    var light2 = localStorage.getItem("room1-range2");
+                    light2!=null?document.write(`<p>${light2}</p>`): document.write(`<p>50</p>`)
+                </script>               </div>
               <div class="light-element-c">
                 <label for="light-3">Light 3</label>
-                <p>52</p>
-              </div>
+                <script>
+                    var light3 = localStorage.getItem("room1-range3");
+                    light3!=null?document.write(`<p>${light3}</p>`): document.write(`<p>50</p>`)
+                </script>              </div>
             </div>        
           </div>
     
