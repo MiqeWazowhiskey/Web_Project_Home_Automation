@@ -61,6 +61,7 @@ body {
 .logo{
   color: rgb(199, 109, 36);
   padding-left: 32px;
+  text-shadow: 2px 2px black;
   font-style: italic;
   font-weight: bolder;
 }
@@ -75,34 +76,33 @@ body {
 }
 
 .degree {
-display: flex;
-flex-direction: row;
-height: 10%;
-width: 170px;
-align-items: center;
-justify-content: center;
+  display: flex;
+  flex-direction: row;
+  height: 10%;
+  width: 170px;
+  align-items: center;
+  justify-content: center;
 }
 .degree label {
-font-size: 1.2em;
-font-weight: bold;
-margin-bottom: 15px;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 15px;
 }
 
 .degree-input {
-width:120%;
+  width:100%;
 }
 
 .degree-value {
-width: 80%;
-text-align: center;
-}
+  width: 80%;
+  text-align: center;
+  }
 .switch {
   position: relative;
   display: inline-block;
   width: 60px;
   height: 34px;
   margin: 8px;
-  bottom: 0;
 }
 .switch input { 
   opacity: 0;
@@ -199,7 +199,7 @@ h1 {
 
 .light-range {
   width: 200px;
-  -webkit-appearance: none;
+  appearance: none;
   background-color: #ddd;
   height: 10px;
   border-radius: 5px;
@@ -211,7 +211,7 @@ h1 {
 }
 
 .light-range::-webkit-slider-thumb {
-  -webkit-appearance: none;
+  appearance: none;
   width: 20px;
   height: 20px;
   background-color: #fff;
@@ -315,10 +315,18 @@ h1 {
   background-color: #666;
 }
 .fa-temperature-low,.fa-computer,.fa-wifi,.fa-house-lock,.fa-bolt{
-  font-size: 2em;
+  font-size: 4.5em;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   display: flex;
+  text-shadow: 2px 2px rgb(199, 109, 36);
+}
+.roomNum{
+  position: absolute;
+  font-size: 2em;
+  height: fit-content;
+  opacity: 50%;
+  z-index: 8;
 }

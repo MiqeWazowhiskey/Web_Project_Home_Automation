@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const headerTemplate = `
     <header class="header">
       <h1 class="logo">Logo</h1>
-
       <button class="pp">
         <p>P</p>
       </button> 
@@ -43,3 +42,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   headerContainer.innerHTML = headerTemplate;
 });
+const degreeInput = document.querySelector('#degree-input_room1');
+const degreeValue = document.querySelector('.degree-value_room1');
+
+degreeInput.addEventListener('input', function() {
+    const value = this.value;
+    degreeValue.textContent = `${value} C°`;
+    localStorage.setItem('degree', value);
+});
+
+const storedDegree = localStorage.getItem('degree');
+if (storedDegree) {
+    degreeInput.value = storedDegree;
+    degreeValue.textContent = `${storedDegree} C°`;
+}
