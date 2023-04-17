@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Home Automation</title>
+    <script src="https://kit.fontawesome.com/5dd92a6a44.js" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+
+  </head>
+  <body>
+    <div class="container">
+      
+        <div class="header">
+            
+        </div>
+        <div class="room">
+          
+        </div>
+        
+        <div class="card">
+            <h1>Air Conditioner</h1>
+            <div class="inputsAC">
+                <div class="switch">
+                    <label class="switch-label">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="degree">
+                    <input type="range" class="degree-input" name="degree-input" id="degree-input" min="0" max="100" value="50">
+                    <output class="degree-value">23 C°</output>
+                </div>
+            </div>
+
+        </div>
+        <div class="card">
+            <h1>Computer</h1>
+            <i class="fa-solid fa-computer"></i>
+
+            <div class="switch">
+                <label class="switch-label">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            
+        </div>
+        <div class="card">
+            <h1>Wi-Fi</h1>
+            <i class="fa-solid fa-wifi"></i>
+            <div class="switch">
+                    <label class="switch-label">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+            </div>
+        </div>
+        <div class="card">
+            <h1>Home Lock</h1>
+            <i class="fa-solid fa-house-lock"></i>
+            <div class="switch">
+                    <label class="switch-label">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+            </div>
+        </div>
+        <div class="card">
+            <h1>Electrics</h1>
+            <i class="fa-solid fa-bolt"></i>
+            <div class="switch">
+                    <label class="switch-label">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+            </div>
+        </div>
+        <div class="card">
+          <div class="light-elements">
+            <div class="light-element">
+              <label for="light-1">Light 1</label>
+              <input type="range" class="light-range" name="light-1" id="light-1" min="0" max="100" value="50">
+            </div>
+            <div class="light-element">
+              <label for="light-2">Light 2</label>
+              <input type="range" class="light-range" name="light-2" id="light-2" min="0" max="100" value="50">
+            </div>
+            <div class="light-element">
+              <label for="light-3">Light 3</label>
+              <input type="range" class="light-range" name="light-3" id="light-3" min="0" max="100" value="50">
+            </div>
+          </div>        
+        </div>
+    
+    </div>
+  </body>
+</html>
