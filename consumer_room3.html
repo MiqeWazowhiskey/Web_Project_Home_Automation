@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Home Automation</title>
+    <script src="https://kit.fontawesome.com/5dd92a6a44.js" crossorigin="anonymous"></script>
+    <source src="app.js">
+
+  </head>
+  <body>
+    <div class="container">
+       <div class="roomNum">
+          <h1>Room 3</h1>
+        </div>
+        <div class="header">
+          <header class="header">
+            <h1 class="logo">Logo</h1>
+            <button class="pp">
+              <p>P</p>
+            </button> 
+          </header>
+        </div>
+
+        <div class="room">
+          <div class="rooms">
+            <button class="roomElement"><a href="./consumer_index.html"><p >Room 1</p> </a></button>
+            <button class="roomElement"><a href="./consumer_room2.html"><p >Room 2</p> </a></button>
+            <button class="roomElement"><a href="./consumer_room3.html"><p >Room 3</p> </a></button>
+            <button class="roomElement"><a href="./consumer_room4.html"><p >Room 4</p> </a></button>
+          </div>
+        </div>
+        
+        <div class="card">
+            <h1>Air Conditioner</h1>
+            <div class="inputsAC">
+                <div class="statusAc">
+                    <h1>
+                    <script>
+                        var ac3 = localStorage.getItem("ac3");
+                        if (ac3 == "true") {
+                            document.write("ON");
+                        } else {
+                            document.write("OFF");
+                        }
+                    </script>
+                    </h1>
+                </div>
+                <div class="degree">
+                    <output class="degree-value_room3">23 C°</output>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="card">
+            <h1>Wi-Fi</h1>
+            <i class="fa-solid fa-wifi"></i>
+            <div class="statusWifi">
+                <h1>
+                <script>
+                    var w3 = localStorage.getItem("wifi3");
+                    if (w3 == "true") {
+                        document.write("ON");
+                    } else {
+                        document.write("OFF");
+                    }
+                </script>
+                </h1>
+            </div>
+        </div>
+        <div class="card">
+            <h1>Home Lock</h1>
+            <i class="fa-solid fa-house-lock"></i>
+            <div class="statusLock">
+                <h1>
+                <script>
+                    var l3 = localStorage.getItem("lock3");
+                    if (l3 == "true") {
+                        document.write("ON");
+                    } else {
+                        document.write("OFF");
+                    }
+                </script>
+                </h1>
+            </div>
+        </div>
+        <div class="card">
+            <h1>Electrics</h1>
+            <i class="fa-solid fa-bolt"></i>
+            <div class="statusElectric">
+                <h1>
+                <script>
+                    var el3 = localStorage.getItem("electric3");
+                    if (el3 == "true") {
+                        document.write("ON");
+                    } else {
+                        document.write("OFF");
+                    }
+                </script>
+                </h1>
+            </div>
+        </div>
+        <div class="card">
+          <div class="light-elements">
+            <div class="light-element-c">
+              <label for="light-1">Light 1</label>
+              <p>52</p>
+            </div>
+            <div class="light-element-c">
+              <label for="light-2">Light 2</label>
+              <p>32</p>
+            </div>
+            <div class="light-element-c">
+              <label for="light-3">Light 3</label>
+              <p>52</p>
+            </div>
+          </div>        
+        </div>
+    
+    </div>
+  </body>
+  <script src="app.js"></script>
+
+</html>

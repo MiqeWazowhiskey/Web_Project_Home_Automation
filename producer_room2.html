@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Home Automation</title>
     <script src="https://kit.fontawesome.com/5dd92a6a44.js" crossorigin="anonymous"></script>
-    <script src="app.js"></script>
+    <source src="app.js">
 
   </head>
   <body>
@@ -14,10 +14,21 @@
           <h1>Room 2</h1>
         </div>
         <div class="header">
-            
+          <header class="header">
+            <h1 class="logo">Logo</h1>
+            <button class="pp">
+              <p>P</p>
+            </button> 
+          </header>
         </div>
+
         <div class="room">
-          
+          <div class="rooms">
+            <button class="roomElement"><a href="./producer_index.html"><p >Room 1</p> </a></button>
+            <button class="roomElement"><a href="./producer_room2.html"><p >Room 2</p> </a></button>
+            <button class="roomElement"><a href="./producer_room3.html"><p >Room 3</p> </a></button>
+            <button class="roomElement"><a href="./producer_room4.html"><p >Room 4</p> </a></button>
+          </div>
         </div>
         
         <div class="card">
@@ -25,7 +36,7 @@
             <div class="inputsAC">
                 <div class="switch">
                     <label class="switch-label">
-                      <input type="checkbox">
+                      <input type="checkbox" id="ac_switch_room2">
                       <span class="slider round"></span>
                     </label>
                 </div>
@@ -42,7 +53,7 @@
 
             <div class="switch">
                 <label class="switch-label">
-                    <input type="checkbox">
+                    <input type="checkbox" id="computer_switch_room2">
                     <span class="slider round"></span>
                 </label>
             </div>
@@ -54,7 +65,7 @@
             <i class="fa-solid fa-house-lock"></i>
             <div class="switch">
                     <label class="switch-label">
-                      <input type="checkbox">
+                      <input type="checkbox" id="lock_switch_room2">
                       <span class="slider round"></span>
                     </label>
             </div>
@@ -64,7 +75,7 @@
             <i class="fa-solid fa-bolt"></i>
             <div class="switch">
                     <label class="switch-label">
-                      <input type="checkbox">
+                      <input type="checkbox" id="electric_switch_room2">
                       <span class="slider round"></span>
                     </label>
             </div>
@@ -88,4 +99,59 @@
     
     </div>
   </body>
+  <script src="app.js"></script>
+  <script>
+    //electric2
+if(document.getElementById('electric_switch_room2')){
+  let electricSwitch2 = document.getElementById('electric_switch_room2');
+
+  electricSwitch2.addEventListener('change', function () {
+      localStorage.setItem('electric2', this.checked);
+  });
+
+  let saveElectricSwitch2 = localStorage.getItem('electric2');
+  saveElectricSwitch2 !== null 
+  ?electricSwitch2.checked = saveElectricSwitch2 === 'true'
+  :saveElectricSwitch2 = false
+}
+//comp2
+if(document.getElementById('computer_switch_room2')){
+let compSwitch2 = document.getElementById('computer_switch_room2');
+
+compSwitch2.addEventListener('change', function () {
+    localStorage.setItem('comp2', this.checked);
+});
+
+let saveCompSwitch2 = localStorage.getItem('comp2');
+saveCompSwitch2 !== null 
+?compSwitch2.checked = saveCompSwitch2 === 'true'
+:saveCompSwitch2 = false
+}
+//ac2 switch
+if(document.getElementById('ac_switch_room2')){
+let acSwitch2 = document.getElementById('ac_switch_room2');
+
+acSwitch2.addEventListener('change', function () {
+    localStorage.setItem('ac2', this.checked);
+});
+
+let saveAcSwitch2 = localStorage.getItem('ac2');
+saveAcSwitch2 !== null 
+?acSwitch2.checked = saveAcSwitch2 === 'true'
+:saveAcSwitch2 = false
+}
+//lock2
+if(document.getElementById('lock_switch_room2')){
+  let lockSwitch2 = document.getElementById('lock_switch_room2');
+
+  lockSwitch2.addEventListener('change', function () {
+      localStorage.setItem('lock2', this.checked);
+  });
+
+  let saveLockSwitch2 = localStorage.getItem('lock2');
+  saveLockSwitch2 !== null 
+  ?lockSwitch2.checked = saveLockSwitch2 === 'true'
+  :saveLockSwitch2 = false
+}
+  </script>
 </html>

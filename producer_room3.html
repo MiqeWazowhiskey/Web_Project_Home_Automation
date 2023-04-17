@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Home Automation</title>
     <script src="https://kit.fontawesome.com/5dd92a6a44.js" crossorigin="anonymous"></script>
-    <script src="app.js"></script>
+    <source src="app.js">
 
   </head>
   <body>
@@ -14,10 +14,21 @@
           <h1>Room 3</h1>
         </div>
         <div class="header">
-            
+          <header class="header">
+            <h1 class="logo">Logo</h1>
+            <button class="pp">
+              <p>P</p>
+            </button> 
+          </header>
         </div>
+
         <div class="room">
-          
+          <div class="rooms">
+            <button class="roomElement"><a href="./producer_index.html"><p >Room 1</p> </a></button>
+            <button class="roomElement"><a href="./producer_room2.html"><p >Room 2</p> </a></button>
+            <button class="roomElement"><a href="./producer_room3.html"><p >Room 3</p> </a></button>
+            <button class="roomElement"><a href="./producer_room4.html"><p >Room 4</p> </a></button>
+          </div>
         </div>
         
         <div class="card">
@@ -25,7 +36,7 @@
             <div class="inputsAC">
                 <div class="switch">
                     <label class="switch-label">
-                      <input type="checkbox">
+                      <input type="checkbox" id="ac_switch_room3">
                       <span class="slider round"></span>
                     </label>
                 </div>
@@ -42,7 +53,7 @@
             <i class="fa-solid fa-wifi"></i>
             <div class="switch">
                     <label class="switch-label">
-                      <input type="checkbox">
+                      <input type="checkbox" name="wifi_switch_room3" id="wifi_switch_room3">
                       <span class="slider round"></span>
                     </label>
             </div>
@@ -52,7 +63,7 @@
             <i class="fa-solid fa-house-lock"></i>
             <div class="switch">
                     <label class="switch-label">
-                      <input type="checkbox">
+                      <input type="checkbox" id="lock_switch_room3">
                       <span class="slider round"></span>
                     </label>
             </div>
@@ -62,7 +73,7 @@
             <i class="fa-solid fa-bolt"></i>
             <div class="switch">
                     <label class="switch-label">
-                      <input type="checkbox">
+                      <input type="checkbox" id="electric_switch_room3">
                       <span class="slider round"></span>
                     </label>
             </div>
@@ -86,4 +97,6 @@
     
     </div>
   </body>
+  <script src="app.js"></script>
+
 </html>

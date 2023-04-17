@@ -1,58 +1,161 @@
 
-//sliders
-const sliders = document.querySelectorAll('input[type="range"]');
-sliders.forEach(slider => {
-  slider.addEventListener('input', function() {
-    const lightValue = document.querySelector(`#light-value-${slider.dataset.id}`);
-    lightValue.textContent = slider.value;
+//wifi1
+if(document.getElementById('wifi_switch_room1')){
+  let wifiSwitch1 = document.getElementById('wifi_switch_room1');
+
+wifiSwitch1.addEventListener('change', function () {
+    localStorage.setItem('wifi1', this.checked);
+});
+
+let saveWifiSwitch1 = localStorage.getItem('wifi1');
+saveWifiSwitch1 !== null 
+?wifiSwitch1.checked = saveWifiSwitch1 === 'true'
+:saveWifiSwitch1 = false
+}
+//wifi3
+if(document.getElementById('wifi_switch_room3')){
+let wifiSwitch3 = document.getElementById('wifi_switch_room3');
+
+wifiSwitch3.addEventListener('change', function () {
+    localStorage.setItem('wifi3', this.checked);
+});
+
+let saveWifiSwitch3 = localStorage.getItem('wifi3');
+saveWifiSwitch3 !== null 
+?wifiSwitch3.checked = saveWifiSwitch3 === 'true'
+:saveWifiSwitch3 = false
+}
+//wifi4
+if(document.getElementById('wifi_switch_room4')){
+let wifiSwitch4 = document.getElementById('wifi_switch_room4');
+
+wifiSwitch4.addEventListener('change', function () {
+    localStorage.setItem('wifi4', this.checked);
+});
+
+let saveWifiSwitch4 = localStorage.getItem('wifi4');
+saveWifiSwitch4 !== null 
+?wifiSwitch4.checked = saveWifiSwitch4 === 'true'
+:saveWifiSwitch4 = false
+}
+//comp1
+if(document.getElementById('computer_switch_room1')){
+let compSwitch1 = document.getElementById('computer_switch_room1');
+
+compSwitch1.addEventListener('change', function () {
+    localStorage.setItem('comp1', this.checked);
+});
+
+let saveCompSwitch1 = localStorage.getItem('comp1');
+saveCompSwitch1 !== null 
+?compSwitch1.checked = saveCompSwitch1 === 'true'
+:saveCompSwitch1 = false
+}
+
+//ac1 switch
+if(document.getElementById('ac_switch_room1')){
+let acSwitch1 = document.getElementById('ac_switch_room1');
+
+acSwitch1.addEventListener('change', function () {
+    localStorage.setItem('ac1', this.checked);
+});
+
+let saveAcSwitch1 = localStorage.getItem('ac1');
+saveAcSwitch1 !== null 
+?acSwitch1.checked = saveAcSwitch1 === 'true'
+:saveAcSwitch1 = false
+}
+//ac3 switch
+if(document.getElementById('ac_switch_room3')){
+  let acSwitch3 = document.getElementById('ac_switch_room3');
+  
+  acSwitch3.addEventListener('change', function () {
+      localStorage.setItem('ac3', this.checked);
   });
-});
+  
+  let saveAcSwitch3 = localStorage.getItem('ac3');
+  saveAcSwitch3 !== null 
+  ?acSwitch3.checked = saveAcSwitch3 === 'true'
+  :saveAcSwitch3 = false
+  }
+//lock1
+if(document.getElementById('lock_switch_room1')){
+  let lockSwitch1 = document.getElementById('lock_switch_room1');
 
-document.addEventListener('DOMContentLoaded', () => {
-  const headerContainer = document.querySelector('.header');
-  const headerTemplate = `
-    <header class="header">
-      <h1 class="logo">Logo</h1>
-      <button class="pp">
-        <p>P</p>
-      </button> 
-      ${fetch('header.html')
-        .then(response => response.text() )
-        .then(data => data)
-      }
-    </header>
-  `;
+  lockSwitch1.addEventListener('change', function () {
+      localStorage.setItem('lock1', this.checked);
+  });
 
-  headerContainer.innerHTML = headerTemplate;
-});
-document.addEventListener('DOMContentLoaded', () => {
-  const headerContainer = document.querySelector('.room');
-  const headerTemplate = `
-      <div class="rooms">
-          <button class="roomElement"><a href="./producer_index.html"><p >Room 1</p> </a></button>
-          <button class="roomElement"><a href="./producer_room2.html"><p >Room 2</p> </a></button>
-          <button class="roomElement"><a href="./producer_room3.html"><p >Room 3</p> </a></button>
-          <button class="roomElement"><a href="./producer_room4.html"><p >Room 4</p> </a></button>
-      </div>
-      ${fetch('header.html')
-        .then(response => response.text() )
-        .then(data => data)
-      }
-  `;
+  let saveLockSwitch1 = localStorage.getItem('lock1');
+  saveLockSwitch1 !== null 
+  ?lockSwitch1.checked = saveLockSwitch1 === 'true'
+  :saveLockSwitch1 = false
+}
 
-  headerContainer.innerHTML = headerTemplate;
-});
-const degreeInput = document.querySelector('#degree-input_room1');
-const degreeValue = document.querySelector('.degree-value_room1');
+//lock3
+if(document.getElementById('lock_switch_room3')){
+  let lockSwitch3 = document.getElementById('lock_switch_room3');
 
-degreeInput.addEventListener('input', function() {
-    const value = this.value;
-    degreeValue.textContent = `${value} C°`;
-    localStorage.setItem('degree', value);
-});
+  lockSwitch3.addEventListener('change', function () {
+      localStorage.setItem('lock3', this.checked);
+  });
 
-const storedDegree = localStorage.getItem('degree');
-if (storedDegree) {
-    degreeInput.value = storedDegree;
-    degreeValue.textContent = `${storedDegree} C°`;
+  let saveLockSwitch3 = localStorage.getItem('lock3');
+  saveLockSwitch3 !== null 
+  ?lockSwitch3.checked = saveLockSwitch3 === 'true'
+  :saveLockSwitch3 = false
+}
+//lock4
+if(document.getElementById('lock_switch_room4')){
+  let lockSwitch4 = document.getElementById('lock_switch_room4');
+
+  lockSwitch4.addEventListener('change', function () {
+      localStorage.setItem('lock4', this.checked);
+  });
+
+  let saveLockSwitch4 = localStorage.getItem('lock4');
+  saveLockSwitch4 !== null 
+  ?lockSwitch4.checked = saveLockSwitch4 === 'true'
+  :saveLockSwitch4 = false
+}
+
+//electric1
+if(document.getElementById('electric_switch_room1')){
+  let electricSwitch1 = document.getElementById('electric_switch_room1');
+
+  electricSwitch1.addEventListener('change', function () {
+      localStorage.setItem('electric1', this.checked);
+  });
+
+  let saveElectricSwitch1 = localStorage.getItem('electric1');
+  saveElectricSwitch1 !== null 
+  ?electricSwitch1.checked = saveElectricSwitch1 === 'true'
+  :saveElectricSwitch1 = false
+}
+
+//electric3
+if(document.getElementById('electric_switch_room3')){
+  let electricSwitch3 = document.getElementById('electric_switch_room3');
+
+  electricSwitch3.addEventListener('change', function () {
+      localStorage.setItem('electric3', this.checked);
+  });
+
+  let saveElectricSwitch3 = localStorage.getItem('electric3');
+  saveElectricSwitch3 !== null 
+  ?electricSwitch3.checked = saveElectricSwitch3 === 'true'
+  :saveElectricSwitch3 = false
+}
+//electric4
+if(document.getElementById('electric_switch_room4')){
+  let electricSwitch4 = document.getElementById('electric_switch_room4');
+
+  electricSwitch4.addEventListener('change', function () {
+      localStorage.setItem('electric4', this.checked);
+  });
+
+  let saveElectricSwitch4 = localStorage.getItem('electric4');
+  saveElectricSwitch4 !== null
+  ? electricSwitch4.checked = saveElectricSwitch4 ==='true'
+  :saveElectricSwitch4 =false 
 }

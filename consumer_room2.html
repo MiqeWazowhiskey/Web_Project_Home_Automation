@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Home Automation</title>
+    <script src="https://kit.fontawesome.com/5dd92a6a44.js" crossorigin="anonymous"></script>
+    <source src="app.js">
+
+  </head>
+  <body>
+    <div class="container">
+       <div class="roomNum">
+          <h1>Room 2</h1>
+        </div>
+        <div class="header">
+          <header class="header">
+            <h1 class="logo">Logo</h1>
+            <button class="pp">
+              <p>P</p>
+            </button> 
+          </header>
+        </div>
+
+        <div class="room">
+          <div class="rooms">
+            <button class="roomElement"><a href="./consumer_index.html"><p >Room 1</p> </a></button>
+            <button class="roomElement"><a href="./consumer_room2.html"><p >Room 2</p> </a></button>
+            <button class="roomElement"><a href="./consumer_room3.html"><p >Room 3</p> </a></button>
+            <button class="roomElement"><a href="./consumer_room4.html"><p >Room 4</p> </a></button>
+          </div>
+        </div>
+        
+        <div class="card">
+            <h1>Air Conditioner</h1>
+            <div class="inputsAC">
+                <div class="statusAc">
+                    <h1>
+                    <script>
+                        var ac2 = localStorage.getItem("ac2");
+                        if (ac2 == "true") {
+                            document.write("ON");
+                        } else {
+                            document.write("OFF");
+                        }
+                    </script>
+                    </h1>
+                </div>
+                <div class="degree">
+                    <output class="degree-value_room2">23 C°</output>
+                </div>
+            </div>
+
+        </div>
+        <div class="card">
+            <h1>Computer</h1>
+            <i class="fa-solid fa-computer"></i>
+
+            <div class="statusComp1">
+                <h1>
+                    <script>
+                        var c2 = localStorage.getItem("comp2");
+                        if (c2 == "true") {
+                            document.write("ON");
+                        } else {
+                            document.write("OFF");
+                        }
+                    </script>
+                </h1>   
+            </div>
+        </div>
+        
+        <div class="card">
+            <h1>Home Lock</h1>
+            <i class="fa-solid fa-house-lock"></i>
+            <div class="statusLock">
+                <h1>
+                <script>
+                    var l2 = localStorage.getItem("lock2");
+                    if (l2 == "true") {
+                        document.write("ON");
+                    } else {
+                        document.write("OFF");
+                    }
+                </script>
+                </h1>
+            </div>
+        </div>
+        <div class="card">
+            <h1>Electrics</h1>
+            <i class="fa-solid fa-bolt"></i>
+            <div class="statusElectric">
+                <h1>
+                <script>
+                    var el2 = localStorage.getItem("electric2");
+                    if (el2 == "true") {
+                        document.write("ON");
+                    } else {
+                        document.write("OFF");
+                    }
+                </script>
+                </h1>
+            </div>
+        </div>
+        <div class="card">
+          <div class="light-elements">
+            <div class="light-element-c">
+              <label for="light-1">Light 1</label>
+              <p>52</p>
+            </div>
+            <div class="light-element-c">
+              <label for="light-2">Light 2</label>
+              <p>32</p>
+            </div>
+            <div class="light-element-c">
+              <label for="light-3">Light 3</label>
+              <p>52</p>
+            </div>
+          </div>        
+        </div>
+    
+    </div>
+  </body>
+  <script src="app.js"></script>
+  
+</html>
