@@ -159,3 +159,16 @@ if(document.getElementById('electric_switch_room4')){
   ? electricSwitch4.checked = saveElectricSwitch4 ==='true'
   :saveElectricSwitch4 =false 
 }
+//lights
+if(document.getElementById('room1-light-1')){
+const light1 = document.getElementById('room1-light-1');
+
+light1.addEventListener('input', function () {
+    localStorage.setItem('light1', this.value);
+});
+
+const saveL1 = localStorage.getItem('light1');
+saveL1 !== null 
+?light1.value = saveL1
+:saveL1 = 50;
+}
