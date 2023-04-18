@@ -41,12 +41,15 @@
                     </label>
                 </div>
                 <div class="degree">
-                    <input type="range" class="degree-input_room2" name="degree-input_room2" id="degree-input_room2" min="0" max="100" value="50">
-                    <output class="degree-value_room2">
-                      <script>
-                        var ac2 = localStorage.getItem("degree-input-room2");
-                        ac2!=null?document.write(`${ac2}`): document.write(`23`)
-                      </script>  C°</output>
+                  <output class="degree-value_room2">
+                    <script>
+                      var ac2 = localStorage.getItem("degree-input-room2");
+                      ac2!=null?document.write(`<p>${ac2} C°</p>`): document.write(`<p>23 C°</p>`)
+                    </script>  </output>
+                  <div class="light-element">
+                    <input type="range" class="degree-input" name="light-3" id="degree-input-room2" min="0" max="100" value="50">
+                  </div>
+                  
                 </div>
             </div>
 
@@ -88,15 +91,15 @@
           <div class="light-elements">
             <div class="light-element">
               <label for="light-1">Light 1</label>
-              <input type="range" class="light-range" name="light-1" id="light-1" min="0" max="100" value="50">
+              <input type="range" class="light-range" name="light-1" id="room2-light-1" min="0" max="100" value="50">
             </div>
             <div class="light-element">
               <label for="light-2">Light 2</label>
-              <input type="range" class="light-range" name="light-2" id="light-2" min="0" max="100" value="50">
+              <input type="range" class="light-range" name="light-2" id="room2-light-2" min="0" max="100" value="50">
             </div>
             <div class="light-element">
               <label for="light-3">Light 3</label>
-              <input type="range" class="light-range" name="light-3" id="light-3" min="0" max="100" value="50">
+              <input type="range" class="light-range" name="light-3" id="room2-light-3" min="0" max="100" value="50">
             </div>
           </div>        
         </div>
