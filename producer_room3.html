@@ -1,102 +1,145 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Home Automation</title>
-    <script src="https://kit.fontawesome.com/5dd92a6a44.js" crossorigin="anonymous"></script>
-    <source src="app.js">
-
+    <script
+      src="https://kit.fontawesome.com/5dd92a6a44.js"
+      crossorigin="anonymous"
+    ></script>
+    <source src="app.js" />
   </head>
   <body>
     <div class="container">
-       <div class="roomNum">
-          <h1>Room 3</h1>
-        </div>
-        <div class="header">
-          <header class="header">
-            <h1 class="logo">Logo</h1>
-            <button class="pp">
-              <p>P</p>
-            </button> 
-          </header>
-        </div>
+      <div class="roomNum">
+        <h1>Room 3</h1>
+      </div>
+      <div class="header">
+        <header class="header">
+          <h1 class="logo">Logo</h1>
+          <button class="pp">
+            <p>P</p>
+          </button>
+        </header>
+      </div>
 
-        <div class="room">
-          <div class="rooms">
-            <button class="roomElement"><a href="./producer_index.html"><p >Room 1</p> </a></button>
-            <button class="roomElement"><a href="./producer_room2.html"><p >Room 2</p> </a></button>
-            <button class="roomElement"><a href="./producer_room3.html"><p >Room 3</p> </a></button>
-            <button class="roomElement"><a href="./producer_room4.html"><p >Room 4</p> </a></button>
+      <div class="room">
+        <div class="rooms">
+          <button class="roomElement">
+            <a href="./producer_index.html"><p>Living Room</p> </a>
+          </button>
+          <button class="roomElement">
+            <a href="./producer_room2.html"><p>Family Room</p> </a>
+          </button>
+          <button class="roomElement">
+            <a href="./producer_room3.html"><p>Bedroom</p> </a>
+          </button>
+          <button class="roomElement">
+            <a href="./producer_room4.html"><p>Kids Bedroom</p> </a>
+          </button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h1>Air Conditioner</h1>
+        <div class="inputsAC">
+          <div class="switch">
+            <label class="switch-label">
+              <input type="checkbox" id="ac_switch_room3" />
+              <span class="slider round"></span>
+            </label>
+          </div>
+          <div class="degree">
+            <input
+              type="range"
+              class="degree-input_room3"
+              name="degree-input_room3"
+              id="degree-input_room3"
+              min="0"
+              max="100"
+              value="50"
+            />
+            <output class="degree-value_room3">23 C°</output>
           </div>
         </div>
-        
-        <div class="card">
-            <h1>Air Conditioner</h1>
-            <div class="inputsAC">
-                <div class="switch">
-                    <label class="switch-label">
-                      <input type="checkbox" id="ac_switch_room3">
-                      <span class="slider round"></span>
-                    </label>
-                </div>
-                <div class="degree">
-                    <input type="range" class="degree-input_room3" name="degree-input_room3" id="degree-input_room3" min="0" max="100" value="50">
-                    <output class="degree-value_room3">23 C°</output>
-                </div>
-            </div>
+      </div>
 
+      <div class="card">
+        <h1>Wi-Fi</h1>
+        <i class="fa-solid fa-wifi"></i>
+        <div class="switch">
+          <label class="switch-label">
+            <input
+              type="checkbox"
+              name="wifi_switch_room3"
+              id="wifi_switch_room3"
+            />
+            <span class="slider round"></span>
+          </label>
         </div>
-        
-        <div class="card">
-            <h1>Wi-Fi</h1>
-            <i class="fa-solid fa-wifi"></i>
-            <div class="switch">
-                    <label class="switch-label">
-                      <input type="checkbox" name="wifi_switch_room3" id="wifi_switch_room3">
-                      <span class="slider round"></span>
-                    </label>
-            </div>
+      </div>
+      <div class="card">
+        <h1>Home Lock</h1>
+        <i class="fa-solid fa-house-lock"></i>
+        <div class="switch">
+          <label class="switch-label">
+            <input type="checkbox" id="lock_switch_room3" />
+            <span class="slider round"></span>
+          </label>
         </div>
-        <div class="card">
-            <h1>Home Lock</h1>
-            <i class="fa-solid fa-house-lock"></i>
-            <div class="switch">
-                    <label class="switch-label">
-                      <input type="checkbox" id="lock_switch_room3">
-                      <span class="slider round"></span>
-                    </label>
-            </div>
+      </div>
+      <div class="card">
+        <h1>Electrics</h1>
+        <i class="fa-solid fa-bolt"></i>
+        <div class="switch">
+          <label class="switch-label">
+            <input type="checkbox" id="electric_switch_room3" />
+            <span class="slider round"></span>
+          </label>
         </div>
-        <div class="card">
-            <h1>Electrics</h1>
-            <i class="fa-solid fa-bolt"></i>
-            <div class="switch">
-                    <label class="switch-label">
-                      <input type="checkbox" id="electric_switch_room3">
-                      <span class="slider round"></span>
-                    </label>
-            </div>
+      </div>
+      <div class="card">
+        <div class="light-elements">
+          <div class="light-element">
+            <label for="light-1">Light 1</label>
+            <input
+              type="range"
+              class="light-range"
+              name="light-1"
+              id="room3-light-1"
+              min="0"
+              max="100"
+              value="50"
+            />
+          </div>
+          <div class="light-element">
+            <label for="light-2">Light 2</label>
+            <input
+              type="range"
+              class="light-range"
+              name="light-2"
+              id="room3-light-2"
+              min="0"
+              max="100"
+              value="50"
+            />
+          </div>
+          <div class="light-element">
+            <label for="light-3">Light 3</label>
+            <input
+              type="range"
+              class="light-range"
+              name="light-3"
+              id="room3-light-3"
+              min="0"
+              max="100"
+              value="50"
+            />
+          </div>
         </div>
-        <div class="card">
-          <div class="light-elements">
-            <div class="light-element">
-              <label for="light-1">Light 1</label>
-              <input type="range" class="light-range" name="light-1" id="room3-light-1" min="0" max="100" value="50">
-            </div>
-            <div class="light-element">
-              <label for="light-2">Light 2</label>
-              <input type="range" class="light-range" name="light-2" id="room3-light-2" min="0" max="100" value="50">
-            </div>
-            <div class="light-element">
-              <label for="light-3">Light 3</label>
-              <input type="range" class="light-range" name="light-3" id="room3-light-3" min="0" max="100" value="50">
-            </div>
-          </div>        
-        </div>
-    
+      </div>
     </div>
   </body>
   <script src="app.js"></script>
-
 </html>

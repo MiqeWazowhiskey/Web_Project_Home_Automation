@@ -1,138 +1,154 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Home Automation</title>
-    <script src="https://kit.fontawesome.com/5dd92a6a44.js" crossorigin="anonymous"></script>
-    <source src="app.js">
-
+    <script
+      src="https://kit.fontawesome.com/5dd92a6a44.js"
+      crossorigin="anonymous"
+    ></script>
+    <source src="app.js" />
   </head>
   <body>
     <div class="container">
-       <div class="roomNum">
-          <h1>Room 2</h1>
+      <div class="roomNum">
+        <h1>Room 2</h1>
+      </div>
+      <div class="header">
+        <header class="header">
+          <h1 class="logo">Logo</h1>
+          <button class="pp">
+            <p>P</p>
+          </button>
+        </header>
+      </div>
+      <div class="room">
+        <div class="rooms">
+          <button class="roomElement">
+            <a href="./consumer_index.html"><p>Living Room</p> </a>
+          </button>
+          <button class="roomElement">
+            <a href="./consumer_room2.html"><p>Family Room</p> </a>
+          </button>
+          <button class="roomElement">
+            <a href="./consumer_room3.html"><p>Bedroom</p> </a>
+          </button>
+          <button class="roomElement">
+            <a href="./consumer_room4.html"><p>Kids Bedroom</p> </a>
+          </button>
         </div>
-        <div class="header">
-          <header class="header">
-            <h1 class="logo">Logo</h1>
-            <button class="pp">
-              <p>P</p>
-            </button> 
-          </header>
-        </div>
-
-        <div class="room">
-          <div class="rooms">
-            <button class="roomElement"><a href="./consumer_index.html"><p >Room 1</p> </a></button>
-            <button class="roomElement"><a href="./consumer_room2.html"><p >Room 2</p> </a></button>
-            <button class="roomElement"><a href="./consumer_room3.html"><p >Room 3</p> </a></button>
-            <button class="roomElement"><a href="./consumer_room4.html"><p >Room 4</p> </a></button>
+      </div>
+      <div class="card">
+        <h1>Air Conditioner</h1>
+        <div class="inputsAC">
+          <div class="degree">
+            <output class="degree-value_room2">
+              <p>
+                <script>
+                  var ac1 = localStorage.getItem("degree-input-room1");
+                  ac1 != null ? document.write(`${ac1}`) : document.write(`23`);
+                </script>
+                C°
+              </p>
+            </output>
           </div>
         </div>
-        
-        <div class="card">
-            <h1>Air Conditioner</h1>
-            <div class="inputsAC">
-                <div class="statusAc">
-                    <h1>
-                    <script>
-                        var ac2 = localStorage.getItem("ac2");
-                        if (ac2 == "true") {
-                            document.write("ON");
-                        } else {
-                            document.write("OFF");
-                        }
-                    </script>
-                    </h1>
-                </div>
-                <div class="degree">
-                    <output class="degree-value_room2">
-                      <script>
-                        var ac1 = localStorage.getItem("degree-input-room1");
-                        ac1!=null?document.write(`${ac1}`): document.write(`23`)
-                      </script>  
-                     C°</output>
-                </div>
-            </div>
+        <div class="statusAc">
+          <h1>
+            <script>
+              var ac2 = localStorage.getItem("ac2");
+              if (ac2 == "true") {
+                document.write("ON");
+              } else {
+                document.write("OFF");
+              }
+            </script>
+          </h1>
+        </div>
+      </div>
+      <div class="card">
+        <h1>Computer</h1>
+        <i class="fa-solid fa-computer"></i>
 
+        <div class="statusComp1">
+          <h1>
+            <script>
+              var c2 = localStorage.getItem("comp2");
+              if (c2 == "true") {
+                document.write("ON");
+              } else {
+                document.write("OFF");
+              }
+            </script>
+          </h1>
         </div>
-        <div class="card">
-            <h1>Computer</h1>
-            <i class="fa-solid fa-computer"></i>
+      </div>
 
-            <div class="statusComp1">
-                <h1>
-                    <script>
-                        var c2 = localStorage.getItem("comp2");
-                        if (c2 == "true") {
-                            document.write("ON");
-                        } else {
-                            document.write("OFF");
-                        }
-                    </script>
-                </h1>   
-            </div>
+      <div class="card">
+        <h1>Home Lock</h1>
+        <i class="fa-solid fa-house-lock"></i>
+        <div class="statusLock">
+          <h1>
+            <script>
+              var l2 = localStorage.getItem("lock2");
+              if (l2 == "true") {
+                document.write("ON");
+              } else {
+                document.write("OFF");
+              }
+            </script>
+          </h1>
         </div>
-        
-        <div class="card">
-            <h1>Home Lock</h1>
-            <i class="fa-solid fa-house-lock"></i>
-            <div class="statusLock">
-                <h1>
-                <script>
-                    var l2 = localStorage.getItem("lock2");
-                    if (l2 == "true") {
-                        document.write("ON");
-                    } else {
-                        document.write("OFF");
-                    }
-                </script>
-                </h1>
-            </div>
+      </div>
+      <div class="card">
+        <h1>Electrics</h1>
+        <i class="fa-solid fa-bolt"></i>
+        <div class="statusElectric">
+          <h1>
+            <script>
+              var el2 = localStorage.getItem("electric2");
+              if (el2 == "true") {
+                document.write("ON");
+              } else {
+                document.write("OFF");
+              }
+            </script>
+          </h1>
         </div>
-        <div class="card">
-            <h1>Electrics</h1>
-            <i class="fa-solid fa-bolt"></i>
-            <div class="statusElectric">
-                <h1>
-                <script>
-                    var el2 = localStorage.getItem("electric2");
-                    if (el2 == "true") {
-                        document.write("ON");
-                    } else {
-                        document.write("OFF");
-                    }
-                </script>
-                </h1>
-            </div>
+      </div>
+      <div class="card">
+        <div class="light-elements">
+          <div class="light-element-c">
+            <label for="light-1">Light 1</label>
+            <script>
+              var light1 = localStorage.getItem("room2-range1");
+              light1 != null
+                ? document.write(`${light1}`)
+                : document.write(`<p>50</p>`);
+            </script>
+          </div>
+          <div class="light-element-c">
+            <label for="light-2">Light 2</label>
+            <script>
+              var light2 = localStorage.getItem("room2-range2");
+              light2 != null
+                ? document.write(`<p>${light2}</p>`)
+                : document.write(`<p>50</p>`);
+            </script>
+          </div>
+          <div class="light-element-c">
+            <label for="light-3">Light 3</label>
+            <script>
+              var light3 = localStorage.getItem("room2-range3");
+              light3 != null
+                ? document.write(`<p>${light3}</p>`)
+                : document.write(`<p>50</p>`);
+            </script>
+          </div>
         </div>
-        <div class="card">
-          <div class="light-elements">
-            <div class="light-element-c">
-              <label for="light-1">Light 1</label>
-              <script>
-                  var light1 = localStorage.getItem("room2-range1");
-                  light1!=null?document.write(`${light1}`): document.write(`<p>50</p>`)
-              </script>
-            </div>
-            <div class="light-element-c">
-              <label for="light-2">Light 2</label>
-              <script>
-                  var light2 = localStorage.getItem("room2-range2");
-                  light2!=null?document.write(`<p>${light2}</p>`): document.write(`<p>50</p>`)
-              </script>               </div>
-            <div class="light-element-c">
-              <label for="light-3">Light 3</label>
-              <script>
-                  var light3 = localStorage.getItem("room2-range3");
-                  light3!=null?document.write(`<p>${light3}</p>`): document.write(`<p>50</p>`)
-              </script>              </div>
-          </div>        
-        </div>
-    
+      </div>
     </div>
   </body>
   <script src="app.js"></script>
-  
 </html>
