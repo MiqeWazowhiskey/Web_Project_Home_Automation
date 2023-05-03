@@ -1,534 +1,570 @@
-@media (min-width: 320px) {
-  .room {
-    margin-top: 40px;
-  }
-  .room p {
-    font-size: 12px !important;
-  }
-  .card i {
-    font-size: 64px !important;
-  }
-  .card h1 {
-    font-size: 2em !important;
-    width: 24px;
-  }
-  .inputsAC {
-    display: flex;
-    width: 100%;
-    flex-direction: column !important;
-    align-items: flex-end !important;
-  }
-  .roomNum {
-    appearance: none;
-  }
-  .degree p {
-    font-size: 22px !important;
-    width: 100%;
-    margin-right: 42px;
-  }
-  .degree-input {
-    height: 32px !important;
-  }
-  .roomElement {
-    margin: 7px;
-  }
-  .header {
-    height: 60px;
-  }
-  .inputsAC {
-    display: flex;
-    width: 100%;
-    flex-direction: column !important;
-    align-items: flex-end !important;
-  }
-  .logo {
-    font-size: 1.5em;
-    padding-left: 20px;
-  }
-  .degree {
-    width: 150px;
-    flex-direction: row !important;
-  }
-  .card {
-    width: 80% !important;
-    height: 240px !important;
-    margin: 10px !important;
-    flex-direction: row !important;
-  }
-  .container {
-    display: flex !important;
-    flex-wrap: nowrap !important;
-    flex-direction: column !important;
-    height: 80% !important;
-  }
-  .light-range {
-    width: 100px !important;
-  }
-  .light-elements {
-    flex-direction: row !important;
-  }
-}
+/*@media (min-width: 320px) {
+    .room {
+        margin-top: 40px;
+    }
+    .room p {
+        font-size: 12px !important;
+    }
+    .card i {
+        font-size: 64px !important;
+    }
+    .card h1 {
+        font-size: 2em !important;
+        width: 24px;
+    }
+    .inputsAC {
+        display: flex;
+        width: 100%;
+        flex-direction: column !important;
+        align-items: flex-end !important;
+    }
+    .roomNum {
+        appearance: none;
+    }
+    .degree p {
+        font-size: 22px !important;
+        width: 100%;
+        margin-right: 42px;
+    }
+    .degree-input {
+        height: 32px !important;
+    }
+    .roomElement {
+        margin: 7px;
+    }
+    .header {
+        height: 60px;
+    }
+    .inputsAC {
+        display: flex;
+        width: 100%;
+        flex-direction: column !important;
+        align-items: flex-end !important;
+    }
+    .logo {
+        font-size: 1.5em;
+        padding-left: 20px;
+    }
+    .degree {
+        width: 150px;
+        flex-direction: row !important;
+    }
+    .card {
+        width: 80% !important;
+        height: 240px !important;
+        margin: 10px !important;
+        flex-direction: row !important;
+    }
+    .container {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        flex-direction: column !important;
+        height: 80% !important;
+    }
+    .light-range {
+        width: 100px !important;
+    }
+    .light-elements {
+        flex-direction: row !important;
+    }
+}*/
 
-@media screen and (min-width: 600px) and (max-width: 900px) {
-  .room {
-    margin-top: 40px;
-  }
-  .room p {
-    font-size: 12px !important;
-  }
-  .card i {
-    font-size: 24px !important;
-  }
-  .card h1 {
-    font-size: 1em !important;
-    width: 24px;
-  }
-  .roomNum {
-    appearance: none;
-  }
-  .inputsAC {
-    display: flex;
-    width: 100%;
-    flex-direction: column !important;
-    align-items: flex-end !important;
-  }
-  .degree p {
-    font-size: 22px !important;
-    width: 100%;
-    margin-right: 42px;
-  }
-  .degree-input {
-    height: 32px !important;
-  }
-  .roomElement {
-    margin: 7px;
-  }
-  .header {
-    height: 60px;
-  }
-
-  .logo {
-    font-size: 1.5em;
-    padding-left: 20px;
-  }
-  .degree {
-    width: 150px;
-    flex-direction: row !important;
-  }
-  .card {
-    width: 80% !important;
-    height: 100px !important;
-    margin: 10px !important;
-    flex-direction: row !important;
-  }
-  .container {
-    display: flex;
-    flex-wrap: nowrap !important;
-    flex-direction: column;
-    height: 100% !important;
-  }
-  .light-range {
-    width: 100px !important;
-  }
-  .light-elements {
-    flex-direction: row !important;
-  }
+@media (max-width: 900px) {
+    .room {
+        margin-top: 40px;
+    }
+    .room p {
+        font-size: 12px !important;
+    }
+    .card i {
+        font-size: 24px !important;
+    }
+    .card h1 {
+        font-size: 1em !important;
+        width: 24px;
+    }
+    .roomNum {
+        appearance: none;
+    }
+    .inputsAC {
+        display: flex;
+        width: 100%;
+        flex-direction: column !important;
+        align-items: flex-end !important;
+    }
+    .degree p {
+        font-size: 22px !important;
+        width: 100%;
+        margin-right: 42px;
+    }
+    .degree-input {
+        height: 32px !important;
+    }
+    .roomElement {
+        margin: 7px;
+    }
+    .header {
+        height: 60px;
+    }
+    .logo {
+        font-size: 1.5em;
+        padding-left: 20px;
+    }
+    .degree {
+        width: 150px;
+        flex-direction: row !important;
+    }
+    .card {
+        width: 80% !important;
+        height: 100px !important;
+        margin: 10px !important;
+        flex-direction: row !important;
+    }
+    .container {
+        display: flex;
+        flex-wrap: nowrap !important;
+        flex-direction: column;
+        height: 100% !important;
+    }
+    .light-range {
+        width: 100px !important;
+    }
+    .light-elements {
+        flex-direction: row !important;
+    }
 }
 
 @media screen and (min-width: 900px) {
-  .header {
-    height: 64px;
-  }
-
-  .room {
-    margin-top: 24px;
-  }
-  .roomElement p {
-    font-size: 24px !important;
-  }
-  .degree {
-    margin: 10px;
-  }
-  .card i {
-    font-size: 24px;
-  }
-  .roomElement {
-    margin: 10px;
-  }
-
-  .degree {
-    width: 170px;
-  }
-  .logo {
-    font-size: 2em;
-    padding-left: 32px;
-  }
-  .light-element {
-    margin-right: 8px;
-    margin-left: 8px;
-  }
-  .inputsAC {
-    display: flex;
-    width: 100%;
-    flex-direction: column !important;
-    align-items: flex-end !important;
-  }
-  .light-element label {
-    font-size: 24px;
-  }
-  .light-range {
-    width: 150px !important;
-  }
-  .degree {
-    width: 150px;
-  }
+    .header {
+        height: 64px;
+    }
+    .room {
+        margin-top: 24px;
+    }
+    .roomElement p {
+        font-size: 24px !important;
+    }
+    .degree {
+        margin: 10px;
+    }
+    .card i {
+        font-size: 24px;
+    }
+    .roomElement {
+        margin: 10px;
+    }
+    .degree {
+        width: 170px;
+    }
+    .logo {
+        font-size: 2em;
+        padding-left: 32px;
+    }
+    .light-element {
+        margin-right: 8px;
+        margin-left: 8px;
+    }
+    .inputsAC {
+        display: flex;
+        width: 100%;
+        flex-direction: column !important;
+        align-items: flex-end !important;
+    }
+    .light-element label {
+        font-size: 24px;
+    }
+    .light-range {
+        width: 150px !important;
+    }
+    .degree {
+        width: 150px;
+    }
 }
+
 .card i {
-  font-size: 64px;
-  width: 80%;
+    font-size: 64px;
+    width: 80%;
 }
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: black;
-  height: 100vh;
-  cursor: default;
-  display: flex;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    height: 100vh;
+    cursor: default;
+    display: flex;
 }
+
 .header {
-  display: flex;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 60px;
-  background-color: #6e5959;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 20;
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #6e5959;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 20;
 }
+
 .room {
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  top: 0;
-  height: 128px;
-  z-index: 50;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    top: 0;
+    height: 128px;
+    z-index: 50;
 }
 
 .rooms {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
+
 .rooms a {
-  text-decoration: none;
+    text-decoration: none;
 }
+
 .roomElement p {
-  text-align: center;
-  color: white;
-  font-size: 18px;
+    text-align: center;
+    color: white;
+    font-size: 18px;
 }
+
 .roomElement {
-  border: none;
-  background-color: #493b3b;
-  border-radius: 5px;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 2px 2px white;
+    border: none;
+    background-color: #493b3b;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 2px 2px white;
 }
 
 .roomElement:hover {
-  background-color: rgb(199, 109, 36);
-  cursor: pointer;
+    background-color: rgb(199, 109, 36);
+    cursor: pointer;
 }
+
 .roomElement:focus {
-  transform: scale(1.05);
-  background-color: rgb(199, 109, 36);
-  box-shadow: none;
+    transform: scale(1.05);
+    background-color: rgb(199, 109, 36);
+    box-shadow: none;
 }
 
 .logo {
-  color: rgb(199, 109, 36);
-  padding-left: 32px;
-  text-shadow: 2px 2px black;
-  font-style: italic;
-  font-weight: bolder;
+    color: rgb(199, 109, 36);
+    padding-left: 32px;
+    text-shadow: 2px 2px black;
+    font-style: italic;
+    font-weight: bolder;
 }
 
 .inputsAC {
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  align-items: center;
-  justify-content: start;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
 }
 
 .degree {
-  display: flex;
-  flex-direction: column;
-  height: 10%;
-  width: 170px;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 10%;
+    width: 170px;
+    align-items: center;
+    justify-content: center;
 }
+
 .degree label {
-  font-size: 5px;
-  font-weight: bold;
-  margin-bottom: 15px;
+    font-size: 5px;
+    font-weight: bold;
+    margin-bottom: 15px;
 }
 
 .degree-input {
-  width: 100%;
+    width: 100%;
 }
 
 .switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-  margin: 8px;
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin: 8px;
 }
+
 .switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
+
 .slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-  border-radius: 50px;
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 50px;
 }
+
 .slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-  border-radius: 50px;
-}
-input:checked + .slider {
-  background-color: orangered;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 50px;
 }
 
-input:focus + .slider {
-  box-shadow: 0 0 1px orangered;
+input:checked+.slider {
+    background-color: orangered;
 }
 
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+input:focus+.slider {
+    box-shadow: 0 0 1px orangered;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
 }
 
 .slider.round {
-  border-radius: 34px;
+    border-radius: 34px;
 }
 
 .slider.round:before {
-  border-radius: 50%;
+    border-radius: 50%;
 }
 
 h1 {
-  text-align: center;
-  color: #333;
-  font-size: 24px;
-  text-shadow: 2px 2px rgb(199, 109, 36);
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    text-shadow: 2px 2px rgb(199, 109, 36);
 }
+
 .container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
-  height: 80%;
-  margin-right: auto;
-  margin-left: auto;
-  width: 80%;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  border-radius: 20px;
-  background-color: #6e6767;
-  margin-top: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    height: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #6e6767;
+    margin-top: 120px;
 }
+
 .light-elements {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 .light-element-c {
-  margin-left: 16px !important;
-  margin-right: 16px !important;
-  font-size: 32px !important;
+    margin-left: 16px !important;
+    margin-right: 16px !important;
+    font-size: 32px !important;
 }
+
 .light-element {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .light-element label {
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
 }
 
 .light-range {
-  width: 200px;
-  appearance: none;
-  background-color: #ddd;
-  height: 10px;
-  border-radius: 5px;
-  margin: 0;
+    width: 200px;
+    appearance: none;
+    background-color: #ddd;
+    height: 10px;
+    border-radius: 5px;
+    margin: 0;
 }
 
 .light-range:focus {
-  outline: none;
+    outline: none;
 }
 
 .light-range::-webkit-slider-thumb {
-  appearance: none;
-  width: 20px;
-  height: 20px;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.15s ease-in-out, transform 0.15s ease-in-out,
-    box-shadow 0.15s ease-in-out;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.15s ease-in-out, transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .light-range:hover::-webkit-slider-thumb {
-  background-color: #2196f3;
-  transform: scale(1.1);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #2196f3;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .light-range:active::-webkit-slider-thumb {
-  transform: scale(1.2);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .pp {
-  width: 48px;
-  height: 48px;
-  border-radius: 100%;
-  background-color: white;
-  margin: 5px;
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    background-color: white;
+    margin: 5px;
 }
 
 .pp:hover {
-  box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.3);
 }
+
 .light .light-value {
-  position: absolute;
-  left: 30px;
-  color: rgb(63, 63, 63);
-  transform: translateX(-50%);
-  margin-bottom: 8px;
+    position: absolute;
+    left: 30px;
+    color: rgb(63, 63, 63);
+    transform: translateX(-50%);
+    margin-bottom: 8px;
 }
+
 .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
 }
+
 .card h2 {
-  color: #333;
-  font-size: 1.2em;
-  margin-bottom: 10px;
-  text-shadow: 1px 1px #e6e6e6;
+    color: #333;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px #e6e6e6;
 }
+
 .card p {
-  color: #666;
-  font-size: 1.2em;
-  line-height: 1.5;
-  margin-top: 20px;
+    color: #666;
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-top: 20px;
 }
+
 .card {
-  background-color: #b4a6a6;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  width: 20%;
-  height: 30%;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-  margin: 20px;
-  border-radius: 10px;
-  transition: transform 0.3s ease-in-out;
-  z-index: 10;
+    background-color: #b4a6a6;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 20%;
+    height: 30%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    z-index: 10;
 }
+
 .degree p {
-  font-size: 32px !important;
-  width: 100%;
-  margin-left: 28px;
-  font-weight: bold;
+    font-size: 26px !important;
+    width: 100%;
+    margin-left: 28px;
+    font-weight: bold;
 }
+
 .card2 {
-  background-color: #b4a6a6;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  width: fit-content;
-  height: 30%;
-  width: 50%;
-  text-align: center;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  padding: 20px;
-  margin: 20px;
-  border-radius: 10px;
-  transition: transform 0.3s ease-in-out;
+    background-color: #b4a6a6;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: fit-content;
+    height: 30%;
+    width: 50%;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
 }
+
 .button {
-  background-color: #333;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  margin-top: 20px;
-  text-decoration: none;
-  display: inline-block;
-  transition: background-color 0.3s;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
 }
+
 .button:hover {
-  background-color: #666;
+    background-color: #666;
 }
+
 .fa-temperature-low,
 .fa-computer,
 .fa-wifi,
 .fa-house-lock,
 .fa-bolt {
-  font-size: 4.5em;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  text-shadow: 2px 2px rgb(199, 109, 36);
+    font-size: 4.5em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-shadow: 2px 2px rgb(199, 109, 36);
 }
+
 .roomNum {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  font-size: 2em;
-  height: 20%;
-  opacity: 50%;
-  z-index: 8;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+    height: 20%;
+    opacity: 50%;
+    z-index: 8;
 }
+
 .statusAc {
-  width: 100%;
+    width: 100%;
+}
+
+.fa-arrow-right-from-bracket {
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 20px;
+    color: #FFA500;
+}
+
+.right-header {
+    margin-right: 10px;
 }
