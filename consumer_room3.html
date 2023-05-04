@@ -12,16 +12,25 @@
   </head>
   <body>
     <div class="container">
-      <div class="roomNum">
-        <h1>Room 3</h1>
-      </div>
+      
       <div class="header">
-        <header class="header">
-          <h1 class="logo">Logo</h1>
-          <button class="pp">
-            <p>P</p>
-          </button>
-        </header>
+        <div class="header">
+          <header class="header">
+              <h1 class="logo">Logo</h1>
+              <div class="roomNum">
+                <h1>Bedroom</h1>
+              </div>
+              <div class="right-header">
+                  <button class="pp">
+          <p>P</p>
+        </button>
+
+                  <a href="./login.php"> <i class="fa-sharp fa-solid fa-arrow-right-from-bracket"></i></a>
+
+              </div>
+      </div>
+      </header>
+
       </div>
 
       <div class="room">
@@ -43,9 +52,10 @@
 
       <div class="card">
         <h1>Air Conditioner</h1>
+
         <div class="inputsAC">
           <div class="degree">
-            <output class="degree-value_room3">
+            <output class="degree-value_room1">
               <p>
                 <script>
                   var ac3 = localStorage.getItem("degree-input-room3");
@@ -54,22 +64,27 @@
                 C°
               </p>
             </output>
+            <div class="statusAc">
+              <h1>
+                <script>
+                  var ac3 = localStorage.getItem("ac3");
+                  if (ac3 == "true") {
+                    document.write("ON");
+                  } else {
+                    document.write("OFF");
+                  }
+                </script>
+              </h1>
+            </div>
+            
           </div>
+          
         </div>
-        <div class="statusAc">
-          <h1>
-            <script>
-              var ac3 = localStorage.getItem("ac3");
-              if (ac3 == "true") {
-                document.write("ON");
-              } else {
-                document.write("OFF");
-              }
-            </script>
-          </h1>
-        </div>
-      </div>
+        
+        <i class="fa-solid fa-temperature-three-quarters"></i>
 
+        
+      </div>
       <div class="card">
         <h1>Wi-Fi</h1>
         <i class="fa-solid fa-wifi"></i>

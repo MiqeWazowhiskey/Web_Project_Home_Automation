@@ -12,17 +12,24 @@
   </head>
   <body>
     <div class="container">
-      <div class="roomNum">
-        <h1>Room 3</h1>
-      </div>
+      
       <div class="header">
         <header class="header">
-          <h1 class="logo">Logo</h1>
-          <button class="pp">
-            <p>P</p>
-          </button>
-        </header>
-      </div>
+            <h1 class="logo">Logo</h1>
+            <div class="roomNum">
+              <h1>Bedroom</h1>
+            </div>
+            <div class="right-header">
+                <button class="pp">
+        <p>P</p>
+      </button>
+
+                <a href="./login.php"> <i class="fa-sharp fa-solid fa-arrow-right-from-bracket"></i></a>
+
+            </div>
+    </div>
+    </header>
+
 
       <div class="room">
         <div class="rooms">
@@ -43,27 +50,34 @@
 
       <div class="card">
         <h1>Air Conditioner</h1>
+        <i class="fa-solid fa-temperature-three-quarters"></i>
+
         <div class="inputsAC">
-          <div class="switch">
-            <label class="switch-label">
-              <input type="checkbox" id="ac_switch_room3" />
-              <span class="slider round"></span>
-            </label>
-          </div>
-          <div class="degree">
-            <input
-              type="range"
-              class="degree-input_room3"
-              name="degree-input_room3"
-              id="degree-input_room3"
-              min="0"
-              max="100"
-              value="50"
-            />
-            <output class="degree-value_room3">23 C°</output>
-          </div>
+            
+            <div class="switch">
+                <label class="switch-label">
+                    <input type="checkbox" id="ac_switch_room1" />
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            
+            <div class="degree">
+                <output class="degree-value_room2">
+                    <script>
+                        var ac1 = localStorage.getItem("degree-input-room3");
+                        ac1 != null
+                        ? document.write(`<p>${ac1} C°</p>`)
+                        : document.write(`<p>23 C°</p>`);
+                    </script>
+                </output>
+                <div class="light-element">
+                    <input type="range" class="degree-input" name="light-3" id="degree-input-room3" min="0" max="100" value="50" />
+                </div>
+            </div>
+
         </div>
-      </div>
+
+    </div>
 
       <div class="card">
         <h1>Wi-Fi</h1>

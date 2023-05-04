@@ -12,12 +12,12 @@
   </head>
   <body>
     <div class="container">
-      <div class="roomNum">
-        <h1>Room 2</h1>
-      </div>
       <div class="header">
         <header class="header">
           <h1 class="logo">Logo</h1>
+          <div class="roomNum">
+            <h1>Family Room</h1>
+          </div>
           <button class="pp">
             <p>P</p>
           </button>
@@ -41,31 +41,34 @@
       </div>
       <div class="card">
         <h1>Air Conditioner</h1>
+
         <div class="inputsAC">
           <div class="degree">
             <output class="degree-value_room2">
               <p>
                 <script>
-                  var ac1 = localStorage.getItem("degree-input-room1");
-                  ac1 != null ? document.write(`${ac1}`) : document.write(`23`);
+                  var ac2 = localStorage.getItem("degree-input-room2");
+                  ac2 != null ? document.write(`${ac2}`) : document.write(`23`);
                 </script>
                 C°
               </p>
             </output>
+            <div class="statusAc">
+              <h1>
+                <script>
+                  var ac2 = localStorage.getItem("ac2");
+                  if (ac2 == "true") {
+                    document.write("ON");
+                  } else {
+                    document.write("OFF");
+                  }
+                </script>
+              </h1>
+            </div>
           </div>
         </div>
-        <div class="statusAc">
-          <h1>
-            <script>
-              var ac2 = localStorage.getItem("ac2");
-              if (ac2 == "true") {
-                document.write("ON");
-              } else {
-                document.write("OFF");
-              }
-            </script>
-          </h1>
-        </div>
+
+        <i class="fa-solid fa-temperature-three-quarters"></i>
       </div>
       <div class="card">
         <h1>Computer</h1>
