@@ -17,7 +17,7 @@
     display: flex;
     width: 100%;
     flex-direction: row !important;
-    align-items: flex-end !important;
+    justify-content: center !important;
   }
 
   .degree p {
