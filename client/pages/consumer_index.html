@@ -2,24 +2,27 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="../style.css" />
     <title>Home Automation</title>
     <script
       src="https://kit.fontawesome.com/5dd92a6a44.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script> 
+    
+    </script>
   </head>
   <body>
     <div class="container">
-      
+      <script src="../scripts/kitchenConsumer.js"></script>
 
-      
       <div class="header">
         <div class="header">
           <header class="header">
               <h1 class="logo">Logo</h1>
               <div class="roomNum">
-                <h1>Living Room</h1>
+                <h1>Kitchen</h1>
               </div>
               <div class="right-header">
                 <button class="pp">
@@ -56,23 +59,13 @@
           <div class="degree">
             <output class="degree-value_room1">
               <p>
-                <script>
-                  var ac1 = localStorage.getItem("degree-input-room1");
-                  ac1 != null ? document.write(`${ac1}`) : document.write(`23`);
-                </script>
-                C°
+                 
+                
               </p>
             </output>
             <div class="statusAc">
               <h1>
-                <script>
-                  var ac1 = localStorage.getItem("ac1");
-                  if (ac1 == "true") {
-                    document.write("ON");
-                  } else {
-                    document.write("OFF");
-                  }
-                </script>
+                 
               </h1>
             </div>
             
@@ -89,93 +82,34 @@
 
         <div class="statusComp1">
           <h1>
-            <script>
-              var c1 = localStorage.getItem("comp1");
-              if (c1 == "true") {
-                document.write("ON");
-              } else {
-                document.write("OFF");
-              }
-            </script>
+             
           </h1>
         </div>
       </div>
       <div class="card">
         <h1>Wi-Fi</h1>
         <i class="fa-solid fa-wifi"></i>
-        <div class="statusWifi">
+        <div class="statusWasher">
           <h1>
-            <script>
-              var w1 = localStorage.getItem("wifi1");
-              if (w1 == "true") {
-                document.write("ON");
-              } else {
-                document.write("OFF");
-              }
-            </script>
+             
           </h1>
         </div>
       </div>
-      <div class="card">
-        <h1>Home Lock</h1>
-        <i class="fa-solid fa-house-lock"></i>
-        <div class="statusLock">
-          <h1>
-            <script>
-              var l1 = localStorage.getItem("lock1");
-              if (l1 == "true") {
-                document.write("ON");
-              } else {
-                document.write("OFF");
-              }
-            </script>
-          </h1>
-        </div>
-      </div>
-      <div class="card">
-        <h1>Electrics</h1>
-        <i class="fa-solid fa-bolt"></i>
-        <div class="statusElectric">
-          <h1>
-            <script>
-              var el1 = localStorage.getItem("electric1");
-              if (el1 == "true") {
-                document.write("ON");
-              } else {
-                document.write("OFF");
-              }
-            </script>
-          </h1>
-        </div>
-      </div>
+     
+     
       <div class="card">
         <div class="light-elements">
-          <div class="light-element-c">
+          <div class="light-element-c ">
             <label for="light-1">Light 1</label>
-            <script>
-              var light1 = localStorage.getItem("room1-range1");
-              light1 != null
-                ? document.write(`<p>${light1}</p>`)
-                : document.write(`<p>50</p>`);
-            </script>
+            <p class="light1"></p>
           </div>
           <div class="light-element-c">
-            <label for="light-2">Light 2</label>
-            <script>
-              var light2 = localStorage.getItem("room1-range2");
-              light2 != null
-                ? document.write(`<p>${light2}</p>`)
-                : document.write(`<p>50</p>`);
-            </script>
+            <label for="light2">Light 2</label>
+            <p class="light2"></p>
           </div>
           <div class="light-element-c">
             <label for="light-3">Light 3</label>
-            <script>
-              var light3 = localStorage.getItem("room1-range3");
-              light3 != null
-                ? document.write(`<p>${light3}</p>`)
-                : document.write(`<p>50</p>`);
-            </script>
+            <p class="light3"></p>
           </div>
         </div>
       </div>
