@@ -5,7 +5,6 @@ $(document).ready(function () {
       type: "GET",
       dataType: "json",
       success: function (data) {
-        localStorage.setItem("kitchenStatus", JSON.stringify(data[1]));
         const temperature = data[1].temperature;
         const acStatus = data[1].ac ? "ON" : "OFF";
         const compStatus = data[1].computer ? "ON" : "OFF";

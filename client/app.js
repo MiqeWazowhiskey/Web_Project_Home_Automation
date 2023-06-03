@@ -3,26 +3,43 @@ if (document.getElementById("wifi_switch_room1")) {
   let wifiSwitch1 = document.getElementById("wifi_switch_room1");
 
   wifiSwitch1.addEventListener("change", function () {
-    const data = localStorage.getItem("kitchenStatus");
-    const status = JSON.parse(data);
     $(document).ready(function () {
+      // Perform a GET request to retrieve the initial kitchen data
       $.ajax({
-        url: "http://localhost/Web_Project_Home_Automation/server/putKitchen.php",
-        type: "PUT",
+        url: "http://localhost/Web_Project_Home_Automation/server/Kitchen/getKitchen.php",
+        type: "GET",
         dataType: "json",
-        body: JSON.stringify({
-          washer: !status.washer,
-        }),
         success: function (data) {
-          console.log(data);
+          // the response is an array, access the first element (index 0) for id = 1
+          let kitchenData = data[1];
+          // Perform a PUT request to update the kitchen data with the reversed wifi value
+          $.ajax({
+            url: "http://localhost/Web_Project_Home_Automation/server/Kitchen/putKitchen.php?id=1",
+            type: "PUT",
+            dataType: "json",
+            contentType: "application/json",
+            data: JSON.stringify({
+              wifi: !kitchenData.wifi,
+            }),
+            success: function (data, textStatus, jqXHR) {
+              console.log("Response status: " + textStatus);
+              console.log("Response data: " + JSON.stringify(data));
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+              console.log("Error status: " + textStatus);
+              console.log("Error details: " + errorThrown);
+            },
+          });
         },
-        error: function () {
-          console.log("Error occurred when retrieving the data...");
+        error: function (jqXHR, textStatus, errorThrown) {
+          console.log("Error status: " + textStatus);
+          console.log("Error details: " + errorThrown);
         },
       });
     });
   });
 }
+
 //wifi3
 if (document.getElementById("wifi_switch_room3")) {
   let wifiSwitch3 = document.getElementById("wifi_switch_room3");
