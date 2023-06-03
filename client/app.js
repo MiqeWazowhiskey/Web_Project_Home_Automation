@@ -3,13 +3,25 @@ if (document.getElementById("wifi_switch_room1")) {
   let wifiSwitch1 = document.getElementById("wifi_switch_room1");
 
   wifiSwitch1.addEventListener("change", function () {
-    localStorage.setItem("wifi1", this.checked);
+    const data = localStorage.getItem("kitchenStatus");
+    const status = JSON.parse(data);
+    $(document).ready(function () {
+      $.ajax({
+        url: "http://localhost/Web_Project_Home_Automation/server/putKitchen.php",
+        type: "PUT",
+        dataType: "json",
+        body: JSON.stringify({
+          washer: !status.washer,
+        }),
+        success: function (data) {
+          console.log(data);
+        },
+        error: function () {
+          console.log("Error occurred when retrieving the data...");
+        },
+      });
+    });
   });
-
-  let saveWifiSwitch1 = localStorage.getItem("wifi1");
-  saveWifiSwitch1 !== null
-    ? (wifiSwitch1.checked = saveWifiSwitch1 === "true")
-    : (saveWifiSwitch1 = false);
 }
 //wifi3
 if (document.getElementById("wifi_switch_room3")) {
