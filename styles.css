@@ -78,7 +78,7 @@ body {
     flex-direction: column;
     left: 0;
     height: 100%;
-    width: 150px;
+    width: 200px;
     background-color: #171717;
 }
 
@@ -91,6 +91,33 @@ body {
 .sideBar p {
     font-size: 20px;
     color: white;
+}
+
+.rooms {
+    display: flex;
+    gap: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.fa-bath {
+    font-size: 20px;
+    color: #2a9d8f;
+}
+
+.fa-utensils {
+    font-size: 20px;
+    color: white;
+}
+
+.fa-bed {
+    font-size: 20px;
+    color: #a3b18a;
+}
+
+.fa-couch {
+    font-size: 20px;
+    color: #bc6c25;
 }
 
 a {
@@ -119,13 +146,17 @@ a {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    gap: 50px;
 }
 
-.under_element {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 100px 50px;
+.fa-wifi {
+    font-size: 50px;
+    color: #00b4d8;
+}
+
+.element h1 {
+    font-size: 50px;
+    color: white;
 }
 
 @media(max-width: 568px) {
@@ -134,7 +165,7 @@ a {
         flex-direction: column;
     }
     .sideBar {
-        height: 60px;
+        height: 80px;
         display: flex;
         flex-direction: row;
         width: 100%;
@@ -152,6 +183,23 @@ a {
     }
     .logoClass {
         margin-left: 10px;
+    }
+    .rooms {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin: 0;
+    }
+    .element {
+        gap: 20px;
+    }
+    .fa-wifi {
+        font-size: 30px;
+        color: #00b4d8;
+    }
+    .element h1 {
+        font-size: 30px;
+        color: white;
     }
 }
 
