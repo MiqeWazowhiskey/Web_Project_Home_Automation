@@ -70,11 +70,24 @@
             tv BOOLEAN
         )";
 
+        $createUsage = "CREATE TABLE IF NOT EXISTS usage (
+            id INT PRIMARY KEY,
+            day1 INT,
+            day2 INT,
+            day3 INT,
+            day4 INT,
+            day5 INT,
+            day6 INT,
+            day7 INT 
+        )";
+
         
         $this->exec($createKitchen);
         $this->exec($createLivingRoom);
         $this->exec($createChildRoom);
         $this->exec($createBedroom);
+        $this->exec($createUsage);
+
 
 
         //insert into tables if it is empty
@@ -114,6 +127,15 @@
             $insertBedroom = "INSERT INTO bedroom (id, light1, light2, light3, temperature, ac, computer, tv)
             VALUES (1, 0, 0, 0, 27, 0, 0, 0)";
             $this->exec($insertBedroom);
+        }
+
+        $checkUsage = "SELECT COUNT(*) FROM bedroom";
+        $countUsage = $this->query($checkUsage)->fetchColumn();
+
+        if ($countUsage == 0) {
+            $insertUsage = "INSERT INTO bedroom (id, day1, day2, day3, day4, day5, day6, day7)
+            VALUES (1, 300, 324, 285, 128, 458, 340, 296)";
+            $this->exec($insertUsage);
         }
 
         }
