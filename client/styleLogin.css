@@ -1,3 +1,4 @@
+<<<<<<< HEAD:client/styleLogin.css
 * {
     font-family: sans-serif;
     box-sizing: border-box;
@@ -111,4 +112,138 @@ a:hover {
     form {
         width: 400px;
     }
+=======
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #161117;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+#head {
+    display: flex;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #171717;
+}
+
+.logo {
+    color: white;
+    text-shadow: 2px 2px black;
+    font-style: italic;
+    font-weight: bolder;
+    margin-top: 45px;
+}
+
+.logoClass {
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.fa-brands {
+    color: yellow;
+    font-size: 20px;
+}
+
+form {
+    width: 500px;
+    border: 7px solid #ccc;
+    padding: 30px;
+    background: #fff;
+    border-radius: 15px;
+    margin: 100px auto 0px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+input {
+    display: block;
+    border: 2px solid #ccc;
+    width: 95%;
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+label {
+    color: #888;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.button {
+    background: #555;
+    padding: 10px 15px;
+    color: #fff;
+    border-radius: 5px;
+    margin-right: 10px;
+    border: none;
+}
+
+button:hover {
+    opacity: .7;
+}
+
+.error {
+    background: #F2DEDE;
+    color: #A94442;
+    padding: 10px;
+    width: 500px;
+    border-radius: 5px;
+    margin: 20px auto;
+}
+
+h1 {
+    margin: auto;
+    text-align: center;
+    color: #fff;
+}
+
+a {
+    float: right;
+    background: #555;
+    padding: 10px 15px;
+    color: #fff;
+    border-radius: 5px;
+    margin-right: 10px;
+    border: none;
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: .7;
+}
+
+@media(max-width: 568px) {
+    h1 {
+        font-size: 25px;
+    }
+    form {
+        width: 400px;
+    }
+>>>>>>> e6d0bf3ee9b93a53fe81409b83d53cce757b7d0f:styleLogin.css
 }
