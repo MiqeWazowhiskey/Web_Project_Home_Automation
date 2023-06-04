@@ -70,7 +70,7 @@
             tv BOOLEAN
         )";
 
-        $createUsage = "CREATE TABLE IF NOT EXISTS usage (
+        $createUsage = "CREATE TABLE IF NOT EXISTS monthlyUsage (
             id INT PRIMARY KEY,
             day1 INT,
             day2 INT,

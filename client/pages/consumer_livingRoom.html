@@ -8,11 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/5dd92a6a44.js" crossorigin="anonymous"></script>
     <title>Home Automation2</title>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
-
+    <script src="../scripts/livingRoomConsumer.js"></script>
     <div class="header">
         <div class="logoClass">
             <i class="fa-brands fa-fort-awesome"></i>
@@ -33,22 +33,22 @@
     <div class="under">
         <div class="sideBar">
             <button class="selected">
-                <a class="rooms" href="./producer_livingRoom.html">
+                <a class="rooms" href="./consumer_livingRoom.html">
                     <i class="fa-solid fa-couch"></i>
                     <p>Living Room</p> </a>
             </button>
             <button>
-                <a class="rooms" href="./producer_kitchen.html">
+                <a class="rooms" href="./consumer_kitchen.html">
                     <i class="fa-solid fa-utensils"></i>
                     <p>Kitchen</p> </a>
             </button>
             <button>
-                <a class="rooms" href="./producer_bedroom.html">
+                <a class="rooms" href="./consumer_bedroom.html">
                     <i class="fa-solid fa-bed"></i>
                     <p>Bedroom</p> </a>
             </button>
             <button>
-                <a class="rooms" href="./producer_childRoom.html">
+                <a class="rooms" href="./consumer_producer.html">
                     <i class="fa-solid fa-bath"></i>
                     <p>Child Room</p> </a>
             </button>
@@ -60,79 +60,45 @@
 
         </div>
         <div class="elements">
-            <div class="element element1">
+            <div class="element element1" id="ac">
                 <i class="fa-solid fa-wind"></i>
                 <h1>A / C</h1>
-                <div class="under_element">
-                    <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                  </label>
-                </div>
+                <h2 style="color:white"></h2>
+                <p style="color:white"></p>
             </div>
-            <div class="element element2">
+            <div class="element element2" id="tv">
                 <i class="fa-solid fa-tv"></i>
 
-                <h1>TV</h1>
+                <h1>Washer</h1>
 
-                <div class="under_element">
-
-                    <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                  </label>
-                </div>
+                <h2 style="color:white"></h2>
             </div>
-            <div class="element element3">
+            <div class="element element3" id="wifi">
                 <i class="fa-solid fa-wifi"></i>
 
                 <h1>Wi-Fi</h1>
 
-                <div class="under_element">
-
-                    <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                  </label>
-                </div>
+                <h2 style="color:white"></h2>
             </div>
-            <div class="element element4">
-                <i class="fa-solid fa-wifi"></i>
+            <div class="element element4" id="light1">
+                <i class="fa-regular fa-sun"></i>
 
-                <h1>wifi</h1>
+                <h1>Light 1</h1>
 
-                <div class="under_element">
-
-                    <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                  </label>
-                </div>
+                <h2 style="color:white"></h2>
             </div>
-            <div class="element element5">
-                <i class="fa-solid fa-wifi"></i>
+            <div class="element element5" id="light2">
+                <i class="fa-regular fa-sun"></i>
 
-                <h1>wifi</h1>
+                <h1>Light 2</h1>
 
-                <div class="under_element">
-
-                    <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                  </label>
-                </div>
+                <h2 style="color:white"></h2>
             </div>
-            <div class="element element6">
-                <i class="fa-solid fa-wifi"></i>
+            <div class="element element6" id="light3">
+                <i class="fa-regular fa-sun"></i>
 
-                <h1>wifi</h1>
-                <div class="under_element">
-
-                    <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                  </label>
-                </div>
+                <h1>Light 3</h1>
+                <h2 style="color:white"></h2>
             </div>
 
         </div>
