@@ -157,6 +157,8 @@ a {
 
 .fa-wifi,
 .fa-sun,
+.fa-uber,
+.fa-cube,
 .fa-sun,
 .fa-lightbulb-cfl,
 .fa-wind,
@@ -205,8 +207,10 @@ a {
     gap: 20px;
   }
   .fa-wifi,
+  .fa-cube,
   .fa-wind,
   .fa-sun,
+  .fa-uber,
   .fa-lightbulb-cfl,
   .fa-tv {
     font-size: 30px;
