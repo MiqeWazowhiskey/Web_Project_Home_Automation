@@ -129,11 +129,11 @@
             $this->exec($insertBedroom);
         }
 
-        $checkUsage = "SELECT COUNT(*) FROM bedroom";
+        $checkUsage = "SELECT COUNT(*) FROM monthlyusage";
         $countUsage = $this->query($checkUsage)->fetchColumn();
 
         if ($countUsage == 0) {
-            $insertUsage = "INSERT INTO bedroom (id, day1, day2, day3, day4, day5, day6, day7)
+            $insertUsage = "INSERT INTO monthlyusage (id, day1, day2, day3, day4, day5, day6, day7)
             VALUES (1, 300, 324, 285, 128, 458, 340, 296)";
             $this->exec($insertUsage);
         }
