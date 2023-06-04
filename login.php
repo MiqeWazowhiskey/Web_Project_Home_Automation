@@ -2,12 +2,17 @@
 <html>
 <head>
   <link rel="stylesheet"  href="styleLogin.css">
+  <script src="https://kit.fontawesome.com/5dd92a6a44.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
   
   <div id="head">
-    <p class="logo">LOGO</p>
-    <h1>HOME AUTOMATION SYSTEM</h1>  
+  <div class="logoClass">
+            <i class="fa-brands fa-fort-awesome"></i>
+            <h2 class="logo">AutoMaison</h2>
+        </div>
+    <h1>HOME AUTOMATION </h1>  
    </div>
    
      <form class="form" action="login.php" method="post">

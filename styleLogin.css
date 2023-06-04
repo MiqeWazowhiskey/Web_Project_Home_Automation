@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 * {
     font-family: sans-serif;
     box-sizing: border-box;
@@ -15,21 +21,34 @@ body {
 
 #head {
     display: flex;
-    flex-direction: row;
-    width: 100vw;
-    background-color: #6e5959;
+    top: 0;
+    width: 100%;
     height: 60px;
-    margin-top: 0;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #171717;
 }
 
 .logo {
-    font-size: 20px;
-    margin-left: 50px;
-    margin-top: auto;
-    margin-bottom: auto;
-    color: #ffa834;
+    color: white;
+    text-shadow: 2px 2px black;
     font-style: italic;
-    text-shadow: 2px 2px 4px #000000;
+    font-weight: bolder;
+    margin-top: 45px;
+}
+
+.logoClass {
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.fa-brands {
+    color: yellow;
+    font-size: 20px;
 }
 
 form {
