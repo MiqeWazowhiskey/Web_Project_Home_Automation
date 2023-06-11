@@ -23,7 +23,7 @@ new Morris.Line({
 Morris.Donut({
     element: 'donut-example',
     data: [
-        { label: "Television", value: 42 },
+        { label: "Television", value: 41 },
         { label: "Washing machine", value: 28 },
         { label: "Computer", value: 21 },
         { label: "Lights", value: 6 },
