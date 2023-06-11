@@ -6,6 +6,7 @@
             parent::__construct("mysql:host=localhost;dbname=home_automation", 'root', '', array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
             $this->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $this->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+            
             //create db if not exists
             try{
                 $checkDbQuery = "SELECT SCHEMA_NAME FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME = home_automation";
@@ -27,7 +28,6 @@
 
         }
 
-        //create tables if not exists
         $createKitchen = "CREATE TABLE IF NOT EXISTS kitchen (
             id INT PRIMARY KEY,
             light1 INT,
@@ -36,9 +36,11 @@
             temperature INT,
             ac BOOLEAN,
             computer BOOLEAN,
-            washer BOOLEAN
+            washer BOOLEAN,
+            usage_id INT,
+            FOREIGN KEY (usage_id) REFERENCES monthlyUsage(id)
         )";
-
+        
         $createLivingRoom = "CREATE TABLE IF NOT EXISTS livingroom (
             id INT PRIMARY KEY,
             light1 INT,
@@ -47,8 +49,11 @@
             temperature INT,
             ac BOOLEAN,
             tv BOOLEAN,
-            wifi BOOLEAN
+            wifi BOOLEAN,
+            usage_id INT,
+            FOREIGN KEY (usage_id) REFERENCES monthlyUsage(id)
         )";
+        
         $createChildRoom = "CREATE TABLE IF NOT EXISTS childroom (
             id INT PRIMARY KEY,
             light1 INT,
@@ -57,8 +62,11 @@
             temperature INT,
             ac BOOLEAN,
             computer BOOLEAN,
-            tv BOOLEAN
+            tv BOOLEAN,
+            usage_id INT,
+            FOREIGN KEY (usage_id) REFERENCES monthlyUsage(id)
         )";
+        
         $createBedroom = "CREATE TABLE IF NOT EXISTS bedroom (
             id INT PRIMARY KEY,
             light1 INT,
@@ -67,9 +75,11 @@
             temperature INT,
             ac BOOLEAN,
             computer BOOLEAN,
-            tv BOOLEAN
+            tv BOOLEAN,
+            usage_id INT,
+            FOREIGN KEY (usage_id) REFERENCES monthlyUsage(id)
         )";
-
+        
         $createUsage = "CREATE TABLE IF NOT EXISTS monthlyUsage (
             id INT PRIMARY KEY,
             day1 INT,
@@ -78,8 +88,17 @@
             day4 INT,
             day5 INT,
             day6 INT,
-            day7 INT 
+            day7 INT,
+            kitchen_id INT,
+            livingroom_id INT,
+            childroom_id INT,
+            bedroom_id INT,
+            FOREIGN KEY (kitchen_id) REFERENCES kitchen(id),
+            FOREIGN KEY (livingroom_id) REFERENCES livingroom(id),
+            FOREIGN KEY (childroom_id) REFERENCES childroom(id),
+            FOREIGN KEY (bedroom_id) REFERENCES bedroom(id)
         )";
+        
 
         
         $this->exec($createKitchen);
