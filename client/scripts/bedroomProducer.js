@@ -62,17 +62,9 @@ if (document.getElementById("wifi_input")) {
             data: JSON.stringify({
               wifi: !bedroomData.wifi,
             }),
-            success: function (data, textStatus, jqXHR) {
-              console.log("Response status: " + textStatus);
-              console.log("Response data: " + JSON.stringify(data));
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-              console.log("Error status: " + textStatus);
-              console.log("Error details: " + errorThrown);
-            },
           });
         },
-        error: function (jqXHR, textStatus, errorThrown) {
+        error: function (textStatus, errorThrown) {
           console.log("Error status: " + textStatus);
           console.log("Error details: " + errorThrown);
         },
@@ -103,17 +95,9 @@ if (document.getElementById("tv_input")) {
             data: JSON.stringify({
               tv: !bedroomData.tv,
             }),
-            success: function (data, textStatus, jqXHR) {
-              console.log("Response status: " + textStatus);
-              console.log("Response data: " + JSON.stringify(data));
-            },
-            error: function (jqXHR, textStatus, errorThrown) {
-              console.log("Error status: " + textStatus);
-              console.log("Error details: " + errorThrown);
-            },
           });
         },
-        error: function (jqXHR, textStatus, errorThrown) {
+        error: function (textStatus, errorThrown) {
           console.log("Error status: " + textStatus);
           console.log("Error details: " + errorThrown);
         },
