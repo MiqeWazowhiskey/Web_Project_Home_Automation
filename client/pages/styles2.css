@@ -1,0 +1,286 @@
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2c2c2c;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header {
+    position: fixed;
+    display: flex;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #171717;
+}
+
+.logoClass {
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+}
+
+.fa-brands {
+    color: yellow;
+    font-size: 20px;
+}
+
+.logo {
+    color: white;
+    text-shadow: 2px 2px black;
+    font-style: italic;
+    font-weight: bolder;
+    margin-left: 5px;
+}
+
+.header h1 {
+    color: white;
+}
+
+.userPP {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.fa-sharp {
+    color: white;
+}
+
+.out {
+    padding: 5px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    overflow: hidden;
+    transition-duration: 0.3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    background-color: rgb(255, 65, 65);
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 60px;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    background-color: #171717;
+    border-radius: 5px;
+    width: 80%;
+    text-align: center;
+    margin: 20px auto 0 auto;
+    position: relative;
+}
+
+.add-room-btn {
+    background-color: #2a9d8f!important;
+}
+
+.add-room-btn:hover {
+    background-color: #57cc99!important;
+}
+
+.sidebar a:hover {
+    background-color: #555;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background-color: #555;
+}
+
+.main {
+    margin-left: 200px;
+    width: 100vw;
+    height: 100vh;
+    /* Same as the width of the sidebar */
+}
+
+.under {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+}
+
+.add-room-form {
+    display: none;
+    padding: 10px;
+    width: 160px;
+    margin: 20px auto 0 auto;
+    background-color: #f1f1f1;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-device-form {
+    display: none;
+    padding: 10px;
+    margin: 20px auto 0 auto;
+    background-color: #f1f1f1;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.add-room-form input[type="text"],
+.add-device-form select {
+    width: calc(100% - 16px);
+    padding: 8px;
+    margin-bottom: 8px;
+    border-radius: 3px;
+    border: none;
+    box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.1);
+}
+
+.add-room-form button,
+.add-device-form button {
+    padding: 8px 16px;
+    border-radius: 3px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer
+}
+
+.add-room-form button:hover,
+.add-device-form button:hover {
+    background-color: #3e8e41
+}
+
+#cancel-add-room,
+#cancel-add-device {
+    background-color: red;
+}
+
+#cancel-add-room:hover,
+#cancel-add-device:hover {
+    background-color: #d62828;
+}
+
+#add-device {
+    display: none;
+    background-color: #2a9d8f;
+    color: white;
+    padding: 10px;
+    margin-left: 20px;
+    margin-top: 10px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+#add-device:hover {
+    background-color: #57cc99;
+    cursor: pointer;
+}
+
+.add-device-form {
+    display: none;
+    padding: 16px;
+}
+
+.device-list {
+    margin-top: 16px;
+}
+
+.device {
+    border: 1px solid #ccc;
+    padding: 8px;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.device button {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    line-height: normal;
+    font-size: .75rem;
+    cursor: pointer
+}
+
+.room-list a button {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    line-height: normal;
+    font-size: .75rem;
+    cursor: pointer
+}
+
+@media (max-width: 568px) {
+    .logoClass {
+        margin-left: 10px;
+    }
+    .under {
+        display: flex;
+        flex-direction: column;
+    }
+    .sidebar {
+        top: 60px;
+        height: 80px;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    .sidebar a {
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-right: 10px;
+        width: 100px;
+    }
+    .main {
+        width: 100%;
+        margin-left: 0px;
+        margin-top: 80px;
+    }
+    .room-list {
+        display: flex;
+        flex-direction: row;
+    }
+    .add-room-form {
+        margin: 0px auto 0 auto;
+    }
+    .add-room-form button,
+    .add-device-form button {
+        padding: 5px 6px;
+    }
+}

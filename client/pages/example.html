@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>deneme</title>
+    <link rel="stylesheet" type="text/css" href="styles2.css">
+    <script src="https://kit.fontawesome.com/5dd92a6a44.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="logoClass">
+            <i class="fa-brands fa-fort-awesome"></i>
+            <h2 class="logo">AutoMaison</h1>
+        </div>
+        <div class="roomNum">
+            <h1 id="room-title"></h1>
+        </div>
+        <div class="user">
+            <button class="userPP">
+            <i class="fa-solid fa-user"></i>
+          </button>
+            <button class="out">
+            <a href="./login.php"> <i class="fa-sharp fa-solid fa-arrow-right-from-bracket"></i></a>
+        </button>
+        </div>
+    </div>
+    <div class="under">
+        <div class="sidebar">
+            <div class="room-list"></div>
+            <a href="#addRoom" class="add-room-btn">+ Add Room </a>
+
+            <div class="add-room-form">
+                <input type="text" id="room-name" placeholder="Room Name">
+                <button id="add-room">Add</button>
+                <button id="cancel-add-room">Cancel</button>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="room-page">
+                <button id="add-device">Add Device</button>
+                <div class="add-device-form">
+                    <select id="device-type">
+                    <option value="">Select a device</option>
+                    <option value="tv">TV</option>
+                    <option value="ac">AC</option>
+                    <option value="light">Light</option>
+                    <option value="computer">Computer</option>
+                    <option value="fridge">Fridge</option>
+                    <option value="washingmachine">Washing Machine</option>
+                </select>
+                    <button id="add-device-to-room">Add</button>
+                    <button id="cancel-add-device">Cancel</button>
+                </div>
+                <div class="device-list"></div>
+                <!-- Add room-specific content here -->
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
