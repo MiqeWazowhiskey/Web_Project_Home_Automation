@@ -1,5 +1,49 @@
 document.addEventListener("DOMContentLoaded", function () {
   var rooms = [];
+  let roomData = [];
+  function updateUI() {
+    var roomList = document.querySelector(".room-list");
+    roomList.innerHTML = "";
+
+    rooms.forEach(function (roomName) {
+      var newRoomLink = document.createElement("a");
+      newRoomLink.href = "#";
+      newRoomLink.textContent = roomName;
+
+      newRoomLink.addEventListener("click", function () {
+        document.querySelector("#room-title").textContent = roomName;
+        document.querySelector(".room-page").style.display = "block";
+        document.querySelector("#add-device").style.display = "block";
+        const room = roomData.filter((v) => v.roomName === roomName);
+        const roomId = room[0].roomId;
+        fetch(
+          `http://localhost/Web_Project_Home_Automation/server/Devices/getDevices.php?roomId=${roomId}`,
+          {
+            method: "GET",
+            headers: { "Content-Type": "application/json" },
+          }
+        )
+          .then((response) => response.json())
+          .then((data) => console.log(data));
+
+        var deviceList = document.querySelector(".device-list");
+        deviceList.innerHTML = "";
+        var devices = rooms[roomName] || [];
+        devices.forEach(function (deviceType) {
+          addDeviceDiv(deviceType, roomName);
+        });
+
+        var roomLinks = document.querySelectorAll(".room-list a");
+        roomLinks.forEach(function (roomLink) {
+          roomLink.classList.remove("active");
+        });
+        newRoomLink.classList.add("active");
+      });
+
+      roomList.appendChild(newRoomLink);
+    });
+  }
+
   fetch(
     "http://localhost/Web_Project_Home_Automation/server/Rooms/getRooms.php",
     {
@@ -10,13 +54,10 @@ document.addEventListener("DOMContentLoaded", function () {
     .then((response) => response.json())
     .then((data) => {
       if (data) {
-        data.map((v) => {
-          rooms.push(v.roomName);
-        });
+        roomData = data;
+        rooms = data.map((v) => v.roomName);
+        updateUI();
       }
-    })
-    .then(() => {
-      console.log(rooms);
     })
     .catch((error) => {
       console.log(error);
