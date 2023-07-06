@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   var rooms = [];
   let roomData = [];
+  let devices = [];
   function updateUI() {
     var roomList = document.querySelector(".room-list");
     roomList.innerHTML = "";
@@ -9,6 +10,18 @@ document.addEventListener("DOMContentLoaded", function () {
       var newRoomLink = document.createElement("a");
       newRoomLink.href = "#";
       newRoomLink.textContent = roomName;
+
+      var deleteRoomButton = document.createElement("button");
+      deleteRoomButton.textContent = "x";
+      deleteRoomButton.addEventListener("click", function (event) {
+        event.stopPropagation();
+        if (confirm("Are you sure you want to delete this room?")) {
+          delete rooms[roomName];
+          newRoomLink.remove();
+          document.querySelector(".room-page").style.display = "none";
+        }
+      });
+      newRoomLink.appendChild(deleteRoomButton);
 
       newRoomLink.addEventListener("click", function () {
         document.querySelector("#room-title").textContent = roomName;
@@ -24,7 +37,27 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         )
           .then((response) => response.json())
-          .then((data) => console.log(data));
+          .then((data) =>
+            data.forEach((v) => {
+              var newDeviceDiv = document.createElement("div");
+              newDeviceDiv.className = "device";
+              newDeviceDiv.textContent = v.deviceName.toUpperCase();
+              newDeviceDiv.style.color = "white";
+              document.querySelector(".device-list").appendChild(newDeviceDiv);
+              var deleteDeviceButton = document.createElement("button");
+              deleteDeviceButton.textContent = "x";
+              deleteDeviceButton.addEventListener("click", function () {
+                if (confirm("Are you sure you want to delete this device?")) {
+                  var deviceIndex = rooms[roomName].indexOf(deviceType);
+                  if (deviceIndex > -1) {
+                    rooms[roomName].splice(deviceIndex, 1);
+                  }
+                  newDeviceDiv.remove();
+                }
+              });
+              newDeviceDiv.appendChild(deleteDeviceButton);
+            })
+          );
 
         var deviceList = document.querySelector(".device-list");
         deviceList.innerHTML = "";
