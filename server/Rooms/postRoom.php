@@ -5,9 +5,8 @@ class API {
     function addRoom() {        
         
         $db = new Connect();
-        $query = "INSERT INTO rooms (roomId, roomName) VALUES (?, ?)";
+        $query = "INSERT INTO rooms (roomName) VALUES (?)";
         $stmt = $db->prepare($query);
-        $stmt->bindValue(1, $_GET['id']);
         
         // Retrieve the 'name' parameter from the request body (using JSON)
         $requestBody = file_get_contents('php://input');
@@ -15,7 +14,7 @@ class API {
         
         if (isset($requestParams['name'])) {
             $name = $requestParams['name'];
-            $stmt->bindParam(2, $name);
+            $stmt->bindParam(1, $name);
             $result = $stmt->execute();
             
             if ($result) {
