@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
               newDeviceDiv.textContent = v.deviceName.toUpperCase();
               newDeviceDiv.style.color = "white";
               document.querySelector(".device-list").appendChild(newDeviceDiv);
+
               var deleteDeviceButton = document.createElement("button");
               deleteDeviceButton.textContent = "x";
               deleteDeviceButton.addEventListener("click", function () {
@@ -194,8 +195,22 @@ document.addEventListener("DOMContentLoaded", function () {
       var deviceType = document.querySelector("#device-type").value;
       if (deviceType) {
         var roomName = document.querySelector("#room-title").textContent;
-        addDeviceDiv(deviceType, roomName);
-        rooms[roomName].push(deviceType);
+        const data = roomData.filter((v) => v.roomName === roomName);
+        const roomId = data[0].roomId;
+
+        fetch(
+          "http://localhost/Web_Project_Home_Automation/server/Devices/postDevice.php",
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              name: deviceType,
+              roomId: roomId,
+            }),
+          }
+        ).catch((err) => {
+          console.log(err);
+        });
 
         document.querySelector("#device-type").value = "";
         document.querySelector(".add-device-form").style.display = "none";
