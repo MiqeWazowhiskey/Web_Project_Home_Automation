@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet"  href="styleLogin.css">
+  <link rel="stylesheet"  href="./styleLogin.css">
   <script src="https://kit.fontawesome.com/5dd92a6a44.js" crossorigin="anonymous"></script>
 
 </head>
@@ -71,5 +71,4 @@
     
   ?>
 </body>
->>>>>>> e6d0bf3ee9b93a53fe81409b83d53cce757b7d0f:login.php
 </html>

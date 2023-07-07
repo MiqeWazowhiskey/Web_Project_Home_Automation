@@ -1,67 +1,38 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+    <title>deneme</title>
+    <link rel="stylesheet" type="text/css" href="styles2.css">
     <script src="https://kit.fontawesome.com/5dd92a6a44.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 
-    <title>TotalUsage</title>
 </head>
 
-<body>
+<body >
     <div class="header">
         <div class="logoClass">
             <i class="fa-brands fa-fort-awesome"></i>
             <h2 class="logo">AutoMaison</h1>
         </div>
         <div class="roomNum">
-            <h1>TotalUsage</h1>
+            <h1 id="room-title">USAGE</h1>
         </div>
         <div class="user">
-            <button class="userPP">
-            <i class="fa-solid fa-user"></i>
+            <button class="userPP" >
+                <a href="./example.html">
+            <i class="fa-solid fa-user"></i></a>
           </button>
             <button class="out">
             <a href="./login.php"> <i class="fa-sharp fa-solid fa-arrow-right-from-bracket"></i></a>
         </button>
         </div>
     </div>
-    <div class="under">
-        <div class="sideBar">
-            <button class="selected">
-                <a class="rooms" href="./consumer_livingRoom.html">
-                    <i class="fa-solid fa-couch"></i>
-                    <p>Living Room</p> </a>
-            </button>
-            <button>
-                <a class="rooms" href="./consumer_kitchen.html">
-                    <i class="fa-solid fa-utensils"></i>
-                    <p>Kitchen</p> </a>
-            </button>
-            <button>
-                <a class="rooms" href="./consumer_bedroom.html">
-                    <i class="fa-solid fa-bed"></i>
-                    <p>Bedroom</p> </a>
-            </button>
-            <button>
-                <a class="rooms" href="./consumer_childRoom.html">
-                    <i class="fa-solid fa-bath"></i>
-                    <p>Child Room</p> </a>
-            </button>
-            <button>
-                <a class="rooms" href="./usage.html">
-                    <i class="fa-solid fa-chart-line"></i>
-                                        <p>Total Usage</p> </a>
-            </button>
-
-        </div>
-        <div class="chart-grid">
+    <div class="under" >
+        <div class="chart-grid" style="display: flex; flex-direction: column; width: 100%; row-gap: 100px; margin-top: 20px;">
             <div class="chart-watt">
                 <div class="chart-head">
                     <h3>Consumed Electricty(kWh)</h3>
@@ -80,9 +51,8 @@
 
         </div>
     </div>
-
-
-
+    <script src="../scripts/main.js"> </script>
+    <script src="script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>

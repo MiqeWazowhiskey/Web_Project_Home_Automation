@@ -27,6 +27,8 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelector("#room-title").textContent = roomName;
         document.querySelector(".room-page").style.display = "block";
         document.querySelector("#add-device").style.display = "block";
+        document.querySelector("#save-button").style.display = "block";
+
         const room = roomData.filter((v) => v.roomName === roomName);
         const roomId = room[0].roomId;
         fetch(
@@ -41,9 +43,58 @@ document.addEventListener("DOMContentLoaded", function () {
             data.forEach((v) => {
               var newDeviceDiv = document.createElement("div");
               newDeviceDiv.className = "device";
+              newDeviceDiv.style.width = "20%";
+              newDeviceDiv.style.height = "300px";
+              newDeviceDiv.style.display = "flex";
+              newDeviceDiv.style.justifyContent = "center";
+              newDeviceDiv.style.alignItems = "center";
+              newDeviceDiv.style.rowGap = "24px";
+              newDeviceDiv.style.flexDirection = "column";
+              newDeviceDiv.style.marginLeft = "auto";
+              newDeviceDiv.style.marginRight = "auto";
               newDeviceDiv.textContent = v.deviceName.toUpperCase();
               newDeviceDiv.style.color = "white";
               document.querySelector(".device-list").appendChild(newDeviceDiv);
+              // Create on-off selection input
+              var onOffSelect = document.createElement("select");
+              onOffSelect.style.width = "64px";
+              onOffSelect.style.height = "48px";
+              if (v.deviceName !== "light") {
+                var onOption = document.createElement("option");
+                onOption.value = "on";
+                onOption.textContent = "On";
+                var offOption = document.createElement("option");
+                offOption.value = "off";
+                offOption.textContent = "Off";
+                onOffSelect.appendChild(onOption);
+                onOffSelect.appendChild(offOption);
+                newDeviceDiv.appendChild(onOffSelect);
+              }
+
+              // Create text input for light devices
+              if (v.deviceName === "light") {
+                var brightnessInput = document.createElement("input");
+                brightnessInput.type = "text";
+                brightnessInput.placeholder = "Brightness";
+                newDeviceDiv.appendChild(brightnessInput);
+              }
+              console.log(v.deviceName);
+              var icon = document.createElement("i");
+              if (v.deviceName === "tv") {
+                icon.className = "fa-solid fa-tv";
+              } else if (v.deviceName === "light") {
+                icon.className = "fa-solid fa-sun";
+              } else if (v.deviceName === "pc") {
+                icon.className = "fa-solid fa-computer-speaker";
+              } else if (v.deviceName === "ac") {
+                icon.className = "fas fa-snowflake";
+              } else if (v.deviceName === "washing machine") {
+                icon.className = "fa-solid fa-shirt";
+              } else if (v.deviceName === "fridge") {
+                icon.className = "fa-solid fa-kitchen-set";
+              }
+              icon.style.fontSize = "48px";
+              newDeviceDiv.appendChild(icon);
 
               var deleteDeviceButton = document.createElement("button");
               deleteDeviceButton.textContent = "x";
@@ -118,6 +169,7 @@ document.addEventListener("DOMContentLoaded", function () {
       document.querySelector("#room-title").textContent = roomName;
       document.querySelector(".room-page").style.display = "block";
       document.querySelector("#add-device").style.display = "block";
+      document.querySelector("#save-button").style.display = "block";
 
       var deviceList = document.querySelector(".device-list");
       deviceList.innerHTML = "";
