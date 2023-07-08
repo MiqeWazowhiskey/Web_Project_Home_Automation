@@ -47,12 +47,12 @@
       
         if($password == $producerPasswords[0] && $username == $producers[0] || $password == $producerPasswords[1] && $username == $producers[1]){
           echo "<script>localStorage.setItem('user', true)</script>";
-          echo "<script>window.location.href='./pages/example.html'</script>";
+          echo "<script>window.location.href='./src/producer.html'</script>";
           exit();
         }
         else if($password == $consumerPasswords[0] && $username == $consumers[0] || $password == $consumerPasswords[1] && $username == $consumers[1]){
           echo "<script>localStorage.setItem('user', true)</script>";
-          echo "<script>window.location.href='./pages/example.html'</script>";
+          echo "<script>window.location.href='./src/consumer.html'</script>";
           exit();
         }
         else if($username == "" && $password == ""){
