@@ -1,4 +1,5 @@
 const addRoomButton = document.getElementById("add-room");
+const saveButton = document.getElementById("save-button");
 
 addRoomButton.addEventListener("click", () => {
   var inputElement = document.getElementById("room-name");
@@ -20,11 +21,52 @@ addRoomButton.addEventListener("click", () => {
       console.log(err);
     });
 });
+let devices = [];
+
+saveButton.addEventListener("click", () => {
+  const deviceInputs = document.querySelectorAll(".device");
+  deviceInputs.forEach((device) => {
+    fetch(
+      "http://localhost/Web_Project_Home_Automation/server/Devices/putDevice.php",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: inputValue,
+        }),
+      }
+    )
+      .then((response) => {
+        return response.json();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  });
+});
 
 document.addEventListener("DOMContentLoaded", function () {
+  const deviceDivs = document.querySelectorAll(".device");
+
+  const showDevices = () => {
+    deviceDivs.forEach((div, index) => {
+      setTimeout(() => {
+        div.style.animationDelay = `${index * 0.2}s`;
+        div.classList.add("visible");
+      }, 100);
+    });
+  };
+
+  const title = document.getElementById("room-title");
+  const observer = new MutationObserver(showDevices);
+  const observerConfig = {
+    characterData: true,
+    subtree: true,
+  };
+  observer.observe(title, observerConfig);
+
   var rooms = [];
   let roomData = [];
-  let devices = [];
   function updateUI() {
     var roomList = document.querySelector(".room-list");
     roomList.innerHTML = "";
@@ -62,10 +104,11 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         )
           .then((response) => response.json())
-          .then((data) =>
+          .then((data) => {
+            devices = data;
             data.forEach((v) => {
               var newDeviceDiv = document.createElement("div");
-              newDeviceDiv.className = "device";
+              newDeviceDiv.className = `device ${v.deviceName}`;
               newDeviceDiv.style.width = "20%";
               newDeviceDiv.style.height = "300px";
               newDeviceDiv.style.display = "flex";
@@ -80,6 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
               document.querySelector(".device-list").appendChild(newDeviceDiv);
               // Create on-off selection input
               var onOffSelect = document.createElement("select");
+              onOffSelect.className = "input";
               onOffSelect.style.width = "64px";
               onOffSelect.style.height = "48px";
               if (v.deviceName !== "light") {
@@ -97,6 +141,7 @@ document.addEventListener("DOMContentLoaded", function () {
               // Create text input for light devices
               if (v.deviceName === "light") {
                 var brightnessInput = document.createElement("input");
+                brightnessInput.className = "input";
                 brightnessInput.type = "text";
                 brightnessInput.placeholder = "Brightness";
                 newDeviceDiv.appendChild(brightnessInput);
@@ -131,8 +176,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
               });
               newDeviceDiv.appendChild(deleteDeviceButton);
-            })
-          );
+            });
+          });
 
         var deviceList = document.querySelector(".device-list");
         deviceList.innerHTML = "";
