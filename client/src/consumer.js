@@ -1,4 +1,23 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const deviceDivs = document.querySelectorAll(".device");
+
+  const showDevices = () => {
+    deviceDivs.forEach((div, index) => {
+      setTimeout(() => {
+        div.style.animationDelay = `${index * 0.2}s`;
+        div.classList.add("visible");
+      }, 100);
+    });
+  };
+
+  const title = document.getElementById("room-title");
+  const observer = new MutationObserver(showDevices);
+  const observerConfig = {
+    characterData: true,
+    subtree: true,
+  };
+  observer.observe(title, observerConfig);
+
   var rooms = [];
   let roomData = [];
   let devices = [];

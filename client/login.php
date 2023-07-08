@@ -8,13 +8,13 @@
 </head>
 <body>
   
-  <div id="head">
-  <div class="logoClass">
-            <i class="fa-brands fa-fort-awesome"></i>
-            <h2 class="logo">AutoMaison</h2>
-        </div>
-    <h1>HOME AUTOMATION </h1>  
-   </div>
+    <div id="head" >
+      <div class="logoClass">
+              <i class="fa-brands fa-fort-awesome"></i>
+              <h2 class="logo">AutoMaison</h2>
+          </div>
+          
+    </div>
    
      <form class="form" action="login.php" method="post">
 
