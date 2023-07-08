@@ -26,13 +26,19 @@ let devices = [];
 saveButton.addEventListener("click", () => {
   const deviceInputs = document.querySelectorAll(".device");
   deviceInputs.forEach((device) => {
+    const id = devices.filter(
+      v.deviceName.toUpperCase() === device.textContent
+    );
+    const statusInput = device.querySelector(".input");
+
     fetch(
       "http://localhost/Web_Project_Home_Automation/server/Devices/putDevice.php",
       {
-        method: "POST",
+        method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          name: inputValue,
+          deviceId: id,
+          status: statusInput,
         }),
       }
     )
